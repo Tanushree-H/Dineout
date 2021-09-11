@@ -7,6 +7,7 @@ import RestaurantMenu from './Pages/RestaurantMenu.js'
 import RestaurantReview from './Pages/RestaurantReview.js'
 import SimpleBottomNavigation from './Components/BottomNavigation';
 import AllPhotos from './Pages/AllPhotos';
+import Intro from './Pages/Intro'
 function App() {
   return (
     <div className="App">
@@ -24,6 +25,7 @@ function App() {
             <Route path={process.env.PUBLIC_URL + '/restaurantmenu'}  > <RestaurantMenu/> </Route>
             <Route path={process.env.PUBLIC_URL + '/restaurantreview'}  > <RestaurantReview/> </Route>
             <Route path={process.env.PUBLIC_URL + '/allphotos'}  > <AllPhotos/> </Route>
+            <Route path={process.env.PUBLIC_URL + '/intro'}  > <Intro/> </Route>
           </Switch>
 
       <footer className="App-footer">
