@@ -1,20 +1,21 @@
 {
   "files": {
     "main.css": "/dineout/static/css/main.af840fbd.chunk.css",
-    "main.js": "/dineout/static/js/main.902af79e.chunk.js",
-    "main.js.map": "/dineout/static/js/main.902af79e.chunk.js.map",
+    "main.js": "/dineout/static/js/main.2b302741.chunk.js",
+    "main.js.map": "/dineout/static/js/main.2b302741.chunk.js.map",
     "runtime-main.js": "/dineout/static/js/runtime-main.42a0c86c.js",
     "runtime-main.js.map": "/dineout/static/js/runtime-main.42a0c86c.js.map",
-    "static/js/2.356fb069.chunk.js": "/dineout/static/js/2.356fb069.chunk.js",
-    "static/js/2.356fb069.chunk.js.map": "/dineout/static/js/2.356fb069.chunk.js.map",
+    "static/js/2.2bdb67a9.chunk.js": "/dineout/static/js/2.2bdb67a9.chunk.js",
+    "static/js/2.2bdb67a9.chunk.js.map": "/dineout/static/js/2.2bdb67a9.chunk.js.map",
     "index.html": "/dineout/index.html",
     "static/css/main.af840fbd.chunk.css.map": "/dineout/static/css/main.af840fbd.chunk.css.map",
-    "static/js/2.356fb069.chunk.js.LICENSE.txt": "/dineout/static/js/2.356fb069.chunk.js.LICENSE.txt"
+    "static/js/2.2bdb67a9.chunk.js.LICENSE.txt": "/dineout/static/js/2.2bdb67a9.chunk.js.LICENSE.txt",
+    "static/media/Youmayalsolike2.63d7286b.jpg": "/dineout/static/media/Youmayalsolike2.63d7286b.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.42a0c86c.js",
-    "static/js/2.356fb069.chunk.js",
+    "static/js/2.2bdb67a9.chunk.js",
     "static/css/main.af840fbd.chunk.css",
-    "static/js/main.902af79e.chunk.js"
+    "static/js/main.2b302741.chunk.js"
   ]
 }
