@@ -15,6 +15,9 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
+import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
+import PhoneOutlinedIcon from '@material-ui/icons/PhoneOutlined';
+import QueryBuilderOutlinedIcon from '@material-ui/icons/QueryBuilderOutlined';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -49,7 +52,7 @@ export default function RecipeReviewCard1() {
 
   return (
     <Card className={classes.root}>
-      <CardHeader
+      {/* <CardHeader
         avatar={
           <Avatar aria-label="recipe" className={classes.avatar}>
             R
@@ -62,25 +65,38 @@ export default function RecipeReviewCard1() {
         }
         title="Shrimp and Chorizo Paella"
         subheader="September 14, 2016"
-      />
+      /> */}
       <CardMedia
         className={classes.media}
-        image="/static/images/cards/paella.jpg"
-        title="Paella dish"
+        image="https://media.wired.com/photos/59269cd37034dc5f91bec0f1/191:100/w_1280,c_limit/GoogleMapTA.jpg"
+        title="map"
       />
       
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
-          This impressive paella is a perfect party dish and a fun meal to cook together with your
-          guests. Add 1 cup of frozen peas along with the mussels, if you like.
+        Society Stores, Lokhandwala Complex, 
+        Near Sanghavi Hospital, Andheri West,
+        Mumbai - 400053.
         </Typography>
+
+        <Typography variant="body2" color="textSecondary" component="p">
+        +91 90040 81700
+        </Typography>
+
+        <Typography variant="body2" color="textSecondary" component="p">
+        11am - 11pm
+        </Typography>
+        
       </CardContent>
       <CardActions disableSpacing>
         <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
+          <LocationOnOutlinedIcon/>
         </IconButton>
         <IconButton aria-label="share">
-          <ShareIcon />
+          <PhoneOutlinedIcon/>
+        </IconButton>
+        <IconButton aria-label="add to favorites">
+          <QueryBuilderOutlinedIcon/>
         </IconButton>
         <IconButton
           className={clsx(classes.expand, {

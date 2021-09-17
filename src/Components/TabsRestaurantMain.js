@@ -6,6 +6,12 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
+import Overview from './Overview1';
+import RecipeReviewCard1 from './Overview2';
+import BasicTextFields from './Overview3';
+import SingleLineImageList from './Overview4';
+import SimpleCard from './Overview1';
+import ContainedButtons from './Overview5';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -59,13 +65,17 @@ export default function SimpleTabs() {
     <div className={classes.root}>
       <AppBar position="static">
         <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
-          <Tab label="Item One" {...a11yProps(0)} />
-          <Tab label="Item Two" {...a11yProps(1)} />
-          <Tab label="Item Three" {...a11yProps(2)} />
+          <Tab label="Overview" {...a11yProps(0)} />
+          <Tab label="Menu" {...a11yProps(1)} />
+          <Tab label="Review" {...a11yProps(2)} />
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
-        Item One
+        <SimpleCard/>
+        <RecipeReviewCard1/>
+        <BasicTextFields/>
+        <SingleLineImageList/>
+        <ContainedButtons/>
       </TabPanel>
       <TabPanel value={value} index={1}>
         Item Two

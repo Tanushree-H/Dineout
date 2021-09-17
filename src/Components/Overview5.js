@@ -15,11 +15,14 @@ export default function ContainedButtons() {
 
   return (
     <div className={classes.root}>
-      
+    
       <Button variant="contained" color="primary">
-        ALL PHOTOS
+        Reserve a Table
       </Button>
-      
+      <Button variant="contained" color="primary">
+        i
+      </Button>
+    
     </div>
   );
 }
