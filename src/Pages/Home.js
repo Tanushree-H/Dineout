@@ -12,7 +12,11 @@ export default function Home() {
   return (
     <React.Fragment>
         <Container maxWidth="sm">
+
+        <header className="App-header">
         <PrimarySearchAppBar/>
+      </header>
+        
         
         <SwipeableTextMobileStepper/>
         <TextMobileStepper1/>

@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   search: {
-    position: 'relative',
+    position: 'sticky',
     borderRadius: theme.shape.borderRadius,
     backgroundColor: alpha(theme.palette.common.white, 0.15),
     '&:hover': {

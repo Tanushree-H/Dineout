@@ -38,54 +38,59 @@ const useStyles = makeStyles((theme) => ({
      title: 'Image',
      author: 'author',
     },
-   {
-    },
   ];
 
-  const TopPicks2 = [
+  const itemData2 = [
     {
-      img: image1,
+      img2: image1,
      title: 'Image',
      author: 'author',
     },
-   {
-    },
   ];
 
-  const TopPicks3 = [
-    {
-      img: image2,
-     title: 'Image',
-     author: 'author',
-    },
-   {
-    },
-  ];
+ 
  
 export default function SingleLineImageList() {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <ImageList className={classes.imageList} cols={2.5}>
-        {itemData.map((item) => (
-          <ImageListItem key={item.img}>
-            <img src={item.img} alt={item.title} />
-            <ImageListItemBar
-              title={item.title}
-              classes={{
-                root: classes.titleBar,
-                title: classes.title,
-              }}
-              actionIcon={
-                <IconButton aria-label={`star ${item.title}`}>
-                  <StarBorderIcon className={classes.title} />
-                </IconButton>
-              }
-            />
-          </ImageListItem>
-        ))}
-      </ImageList>
+        <ImageList className={classes.imageList} cols={2.0}>
+            {itemData.map((item) => (
+                <ImageListItem key={item.img}>
+                    <img src={item.img} alt={item.title} />
+                    <ImageListItemBar
+                        title={item.title}
+                        classes={{
+                            root: classes.titleBar,
+                            title: classes.title,
+                        }}
+                        actionIcon={
+                            <IconButton aria-label={`star ${item.title}`}>
+                                <StarBorderIcon className={classes.title} />
+                            </IconButton>
+                        }
+                    />
+                </ImageListItem>
+            ))}
+            {itemData2.map((item) => (
+                <ImageListItem key={item.img2}>
+                    <img src={item.img2} alt={item.title} />
+                    <ImageListItemBar
+                        title={item.title}
+                        classes={{
+                            root: classes.titleBar,
+                            title: classes.title,
+                        }}
+                        actionIcon={
+                            <IconButton aria-label={`star ${item.title}`}>
+                                <StarBorderIcon className={classes.title} />
+                            </IconButton>
+                        }
+                    />
+                </ImageListItem>
+            ))}
+        </ImageList>
     </div>
-  );
+);
 }
