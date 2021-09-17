@@ -1,11 +1,12 @@
 import React from 'react';
 import Container from '@material-ui/core/Container';
-import ContainedButtons from '../Components/Button';
-import SwipeableTextMobileStepper from '../Components/CarouselMenu';
-import BasicTextFields from '../Components/TextField'
-import SimpleTabs from '../Components/RestaurantTab';
-import RecipeReviewCard from '../Components/Card';
-
+import ContainedButtons from '../Components/ButtonRestaurantMain';
+import SwipeableTextMobileStepper from '../Components/CarouselMenuRestaurantMain';
+import BasicTextFields from '../Components/TextFieldRestaurantMain'
+import SimpleTabs from '../Components/TabsRestaurantMain';
+import RecipeReviewCard1 from '../Components/CardRestaurantMain1';
+import RecipeReviewCard2 from '../Components/CardRestaurantMain2';
+import InputWithIcon from '../Components/TextIconRestaurantMain';
 
 export default function RestaurantMain() {
   return (
@@ -13,10 +14,11 @@ export default function RestaurantMain() {
         <Container maxWidth="sm">
         <ContainedButtons/>
         <SwipeableTextMobileStepper/>
+        <InputWithIcon/>
         <SimpleTabs/>
           <BasicTextFields/>
-        <RecipeReviewCard/>
-        <RecipeReviewCard/>
+        <RecipeReviewCard1/>
+        <RecipeReviewCard2/>
         </Container>
     </React.Fragment>
   );

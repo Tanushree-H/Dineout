@@ -1,9 +1,11 @@
 import React from 'react';
 import Container from '@material-ui/core/Container';
-import PrimarySearchAppBar from '../Components/TopSearchBar';
-import SwipeableTextMobileStepper from '../Components/CarouselMenu';
-import TextMobileStepper from '../Components/Carousel';
-
+import PrimarySearchAppBar from '../Components/TopSearchBarHome';
+import SwipeableTextMobileStepper from '../Components/CarouselMenuHome';
+import TextMobileStepper1 from '../Components/CarouselHome1';
+import TextMobileStepper2 from '../Components/CarouselHome2';
+import TextMobileStepper3 from '../Components/CarouselHome3';
+import SingleLineImageList from '../Components/SingleImageListHome';
 
 
 export default function Home() {
@@ -13,8 +15,10 @@ export default function Home() {
         <PrimarySearchAppBar/>
         
         <SwipeableTextMobileStepper/>
-        <TextMobileStepper/>
-        <TextMobileStepper/>
+        <TextMobileStepper1/>
+        <TextMobileStepper2/>
+        <SingleLineImageList/>
+        <TextMobileStepper3/>
          
           
         

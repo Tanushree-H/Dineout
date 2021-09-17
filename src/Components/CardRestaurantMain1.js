@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function RecipeReviewCard() {
+export default function RecipeReviewCard1() {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
@@ -68,6 +68,7 @@ export default function RecipeReviewCard() {
         image="/static/images/cards/paella.jpg"
         title="Paella dish"
       />
+      
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
           This impressive paella is a perfect party dish and a fun meal to cook together with your

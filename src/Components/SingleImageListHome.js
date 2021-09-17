@@ -5,7 +5,9 @@ import ImageListItem from '@material-ui/core/ImageListItem';
 import ImageListItemBar from '@material-ui/core/ImageListItemBar';
 import IconButton from '@material-ui/core/IconButton';
 import StarBorderIcon from '@material-ui/icons/StarBorder';
-import itemData from './itemData';
+import image from '../Assets/TopPicks1.jpg'
+import image1 from '../Assets/TopPicks2.jpg'
+import image2 from '../Assets/TopPicks3.jpg'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -29,23 +31,37 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-/**
- * The example data is structured as follows:
- *
- * import image from 'path/to/image.jpg';
- * [etc...]
- *
- * const itemData = [
- *   {
- *     img: image,
- *     title: 'Image',
- *     author: 'author',
- *   },
- *   {
- *     [etc...]
- *   },
- * ];
- */
+
+ const itemData = [
+    {
+      img: image,
+     title: 'Image',
+     author: 'author',
+    },
+   {
+    },
+  ];
+
+  const TopPicks2 = [
+    {
+      img: image1,
+     title: 'Image',
+     author: 'author',
+    },
+   {
+    },
+  ];
+
+  const TopPicks3 = [
+    {
+      img: image2,
+     title: 'Image',
+     author: 'author',
+    },
+   {
+    },
+  ];
+ 
 export default function SingleLineImageList() {
   const classes = useStyles();
 
