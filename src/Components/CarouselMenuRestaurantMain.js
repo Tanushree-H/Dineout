@@ -101,10 +101,11 @@ function SwipeableTextMobileStepper() {
             {Math.abs(activeStep - index) <= 2 ? (
               <img className={classes.img} src={step.imgPath} alt={step.label} />
             ) : null}
+            <ContainedButtons1/>
           </div>
         ))}
       </AutoPlaySwipeableViews>
-      <ContainedButtons1/>
+      
       <MobileStepper
         steps={maxSteps}
         position="static"

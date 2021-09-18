@@ -13,27 +13,27 @@ const tutorialSteps = [
   {
     label: 'Restaurants Near You',
     imgPath:
-      'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60',
+      'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cmVzdGF1cmFudHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80',
   },
   {
     label: 'Restaurants Near You',
     imgPath:
-      'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60',
+      'https://assets.cntraveller.in/photos/60ba0b72ee63ec1fe6ee851e/master/pass/cecconis.jpg',
   },
   {
     label: 'Restaurants Near You',
     imgPath:
-      'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250&q=80',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIKHcxzzZIhGaWZmmQD7gjE3l3cqhC4C7lioriem6eYQ0PNQE7CjUL-VUZ8jyntbJfQMw&usqp=CAU',
   },
   {
     label: 'Restaurants Near You',
     imgPath:
-      'https://images.unsplash.com/photo-1518732714860-b62714ce0c59?auto=format&fit=crop&w=400&h=250&q=60',
+      'https://www.outlookindia.com/outlooktraveller/public/uploads/articles/explore/aaheli-feature.jpg',
   },
   {
     label: 'Restaurants Near You',
     imgPath:
-      'https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60',
+      'https://indiarestaurant.com/wp-content/uploads/2019/04/AU_1710010_India__5591_SM-1.jpg',
   },
 ];
 

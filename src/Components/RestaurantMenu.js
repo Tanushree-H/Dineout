@@ -27,11 +27,89 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
- 
- 
   const itemData1 = [
     {
       img1: image1,
+      
+      author: 'author',
+      cols: 2,
+    },
+    
+  ];
+
+  const itemData2 = [
+    {
+      img2: image2,
+      
+      author: 'author',
+      cols: 2,
+    },
+    
+  ];
+
+  const itemData3 = [
+    {
+      img3: image3,
+      
+      author: 'author',
+      cols: 2,
+    },
+    
+  ];
+
+  const itemData4 = [
+    {
+      img4: image4,
+      
+      author: 'author',
+      cols: 2,
+    },
+    
+  ];
+
+  const itemData5 = [
+    {
+      img5: image5,
+      
+      author: 'author',
+      cols: 2,
+    },
+    
+  ];
+
+  const itemData6 = [
+    {
+      img6: image6,
+      
+      author: 'author',
+      cols: 2,
+    },
+    
+  ];
+
+  const itemData7 = [
+    {
+      img7: image7,
+      
+      author: 'author',
+      cols: 2,
+    },
+    
+  ];
+
+  const itemData8 = [
+    {
+      img8: image8,
+      
+      author: 'author',
+      cols: 2,
+    },
+    
+  ];
+
+  const itemData9 = [
+    {
+      img9: image9,
       
       author: 'author',
       cols: 2,
@@ -48,6 +126,54 @@ export default function BasicImageList() {
         {itemData1.map((item) => (
           <ImageListItem key={item.img1} cols={item.cols || 1}>
             <img src={item.img1} alt={item.title} />
+          </ImageListItem>
+        ))}
+
+{itemData2.map((item) => (
+          <ImageListItem key={item.img2} cols={item.cols || 1}>
+            <img src={item.img2} alt={item.title} />
+          </ImageListItem>
+        ))}
+
+{itemData3.map((item) => (
+          <ImageListItem key={item.img3} cols={item.cols || 1}>
+            <img src={item.img3} alt={item.title} />
+          </ImageListItem>
+        ))}
+
+{itemData4.map((item) => (
+          <ImageListItem key={item.img4} cols={item.cols || 1}>
+            <img src={item.img4} alt={item.title} />
+          </ImageListItem>
+        ))}
+
+{itemData5.map((item) => (
+          <ImageListItem key={item.img5} cols={item.cols || 1}>
+            <img src={item.img5} alt={item.title} />
+          </ImageListItem>
+        ))}
+
+{itemData6.map((item) => (
+          <ImageListItem key={item.img6} cols={item.cols || 1}>
+            <img src={item.img6} alt={item.title} />
+          </ImageListItem>
+        ))}
+
+{itemData7.map((item) => (
+          <ImageListItem key={item.img7} cols={item.cols || 1}>
+            <img src={item.img7} alt={item.title} />
+          </ImageListItem>
+        ))}
+
+{itemData8.map((item) => (
+          <ImageListItem key={item.img8} cols={item.cols || 1}>
+            <img src={item.img8} alt={item.title} />
+          </ImageListItem>
+        ))}
+
+{itemData9.map((item) => (
+          <ImageListItem key={item.img9} cols={item.cols || 1}>
+            <img src={item.img9} alt={item.title} />
           </ImageListItem>
         ))}
       </ImageList>

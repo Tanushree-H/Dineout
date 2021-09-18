@@ -11,27 +11,27 @@ const tutorialSteps = [
   {
     label: 'Super Savers',
     imgPath:
-      'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60',
+      'https://restaurantindia.s3.ap-south-1.amazonaws.com/s3fs-public/content12671.jpg',
   },
   {
     label: 'Super Savers',
     imgPath:
-      'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60',
+      'https://media.architecturaldigest.in/wp-content/uploads/2019/02/Ministry-of-Crab-Khar-Mumbai-5.jpg',
   },
   {
     label: 'Super Savers',
     imgPath:
-      'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250&q=80',
+      'https://assets.gqindia.com/photos/5e79f8f1daa717000852d708/master/w_1600%2Cc_limit/Bhukhara-New-Delhi.jpg',
   },
   {
     label: 'Super Savers',
     imgPath:
-      'https://images.unsplash.com/photo-1518732714860-b62714ce0c59?auto=format&fit=crop&w=400&h=250&q=60',
+      'https://images.indianexpress.com/2017/12/indian-accent-restaurant_759.jpg',
   },
   {
     label: 'Super Savers',
     imgPath:
-      'https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8e1gYdwl0d3exi6UIERBl9mGfufW1PHgj5A&usqp=CAU',
   },
 ];
 

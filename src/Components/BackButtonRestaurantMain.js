@@ -27,10 +27,14 @@ export default function UploadButtons() {
         multiple
         type="file"
       />
-      
-      
+     
+     
+      <label htmlFor="icon-button-file">
+        <Button>
       <ArrowBackIos/>
-      
+      </Button>
+      </label>
     </div>
   );
 }
+

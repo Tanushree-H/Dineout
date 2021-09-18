@@ -21,6 +21,7 @@ export default function Home() {
         <SwipeableTextMobileStepper/>
         <TextMobileStepper1/>
         <TextMobileStepper2/>
+        Top Picks
         <SingleLineImageList/>
         <TextMobileStepper3/>
          
