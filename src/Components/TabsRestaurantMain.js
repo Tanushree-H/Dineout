@@ -11,7 +11,8 @@ import RecipeReviewCard1 from './Overview2';
 import BasicTextFields from './Overview3';
 import SingleLineImageList from './Overview4';
 import SimpleCard from './Overview1';
-import ContainedButtons from './Overview5';
+import ContainedButtons from './FixedButtonRestaurantMain';
+import BasicImageList from './RestaurantMenu';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -75,10 +76,9 @@ export default function SimpleTabs() {
         <RecipeReviewCard1/>
         <BasicTextFields/>
         <SingleLineImageList/>
-        <ContainedButtons/>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Item Two
+        <BasicImageList/>
       </TabPanel>
       <TabPanel value={value} index={2}>
         Item Three
