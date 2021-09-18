@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function RecipeReviewCard() {
+export default function Review2() {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
@@ -53,18 +53,18 @@ export default function RecipeReviewCard() {
       <CardHeader
         avatar={
           <Avatar aria-label="recipe" className={classes.avatar}>
-            R
+            A
           </Avatar>
         }
       
-        title="Riya Verma"
-        subheader="September 14, 2016"
+        title="Ankush Sharma"
+        subheader="December 27, 2019"
       />
       
       
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
-          The food quality was really good but service could have been better.
+          Loved the ambience, loved the food.
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
