@@ -11,7 +11,7 @@ import RecipeReviewCard1 from './Overview2';
 import BasicTextFields from './Overview3';
 import SingleLineImageList from './Overview4';
 import SimpleCard from './Overview1';
-import ContainedButtons from './Overview5';
+import FloatingActionButtons from './Overview5';
 import BasicImageList from './RestaurantMenu';
 import RecipeReviewCard from './CardRestaurantReview1';
 import Review2 from './ReviewRestaurant2';
@@ -81,18 +81,18 @@ export default function SimpleTabs() {
         {/* <BasicTextFields/> */}
         You may also like
         <SingleLineImageList/>
-        <ContainedButtons/>
+        
       </TabPanel>
       <TabPanel value={value} index={1}>
         <BasicImageList/>
-        <ContainedButtons/>
+        
       </TabPanel>
       <TabPanel value={value} index={2}>
       <RecipeReviewCard/>
       <Review2/>
       <Review3/>
       <Review4/>
-      <ContainedButtons/>
+      
       </TabPanel>
     </div>
   );
