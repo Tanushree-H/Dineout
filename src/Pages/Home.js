@@ -11,7 +11,7 @@ import SingleLineImageList from '../Components/SingleImageListHome';
 export default function Home() {
   return (
     <React.Fragment>
-        <Container maxWidth="sm">
+        <Container fixed>
 
         <header className="App-header">
         <PrimarySearchAppBar/>

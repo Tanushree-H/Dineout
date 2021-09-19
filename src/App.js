@@ -28,7 +28,7 @@ function App() {
             <Route path={process.env.PUBLIC_URL + '/intro'}  > <Intro/> </Route>
           </Switch>
 
-  
+ 
 
       <footer className="App-footer">
         <SimpleBottomNavigation/>

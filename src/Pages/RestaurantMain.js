@@ -13,8 +13,9 @@ export default function RestaurantMain() {
         <Container fixed >
         
         <SwipeableTextMobileStepper/>
-        <SimpleTabs/>
         <FloatingActionButtons/>
+        <SimpleTabs/>
+        
 
         </Container>
     </React.Fragment>
