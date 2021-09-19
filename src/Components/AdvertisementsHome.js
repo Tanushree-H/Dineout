@@ -6,32 +6,41 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
+import SwipeableViews from 'react-swipeable-views';
+import { autoPlay } from 'react-swipeable-views-utils';
+
+const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const tutorialSteps = [
   {
-    label: 'Super Savers',
+
     imgPath:
-      'https://restaurantindia.s3.ap-south-1.amazonaws.com/s3fs-public/content12671.jpg',
+      // image path changed according to required image
+      'https://etimg.etb2bimg.com/photo/79658783.cms',
   },
   {
-    label: 'Super Savers',
+
     imgPath:
-      'https://media.architecturaldigest.in/wp-content/uploads/2019/02/Ministry-of-Crab-Khar-Mumbai-5.jpg',
+      // image path changed according to required image
+      'https://mediabrief.com/wp-content/uploads/2021/05/Image-Dineout-to-donate-promoCash-COVID-19-relief-MediaBrief.jpg',
   },
   {
-    label: 'Super Savers',
+
     imgPath:
-      'https://assets.gqindia.com/photos/5e79f8f1daa717000852d708/master/w_1600%2Cc_limit/Bhukhara-New-Delhi.jpg',
+      // image path changed according to required image
+      'https://i.ytimg.com/vi/10dQARfBy7U/maxresdefault.jpg',
   },
   {
-    label: 'Super Savers',
+
     imgPath:
-      'https://images.indianexpress.com/2017/12/indian-accent-restaurant_759.jpg',
+      // image path changed according to required image
+      'https://blog.dineout-cdn.co.in/blog/wp-content/uploads/2019/01/blog_banner.png',
   },
   {
-    label: 'Super Savers',
+
     imgPath:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8e1gYdwl0d3exi6UIERBl9mGfufW1PHgj5A&usqp=CAU',
+      // image path changed according to required image
+      'https://i.ytimg.com/vi/IkUfD1lLgQ4/maxresdefault.jpg',
   },
 ];
 
@@ -40,23 +49,18 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 400,
     flexGrow: 1,
   },
-  header: {
-    display: 'flex',
-    alignItems: 'center',
-    height: 50,
-    paddingLeft: theme.spacing(4),
-    // backgroundColor: theme.palette.background.default,
-  },
+
+
   img: {
     height: 255,
+    display: 'block',
     maxWidth: 400,
     overflow: 'hidden',
-    display: 'block',
     width: '100%',
   },
 }));
 
-export default function TextMobileStepper3() {
+function SwipeableTextMobileStepper() {
   const classes = useStyles();
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
@@ -70,16 +74,29 @@ export default function TextMobileStepper3() {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
 
+  const handleStepChange = (step) => {
+    setActiveStep(step);
+  };
+
   return (
     <div className={classes.root}>
       <Paper square elevation={0} className={classes.header}>
         <Typography>{tutorialSteps[activeStep].label}</Typography>
       </Paper>
-      <img
-        className={classes.img}
-        src={tutorialSteps[activeStep].imgPath}
-        alt={tutorialSteps[activeStep].label}
-      />
+      <AutoPlaySwipeableViews
+        axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+        index={activeStep}
+        onChangeIndex={handleStepChange}
+        enableMouseEvents
+      >
+        {tutorialSteps.map((step, index) => (
+          <div key={step.label}>
+            {Math.abs(activeStep - index) <= 2 ? (
+              <img className={classes.img} src={step.imgPath} alt={step.label} />
+            ) : null}
+          </div>
+        ))}
+      </AutoPlaySwipeableViews>
       <MobileStepper
         steps={maxSteps}
         position="static"
@@ -101,3 +118,5 @@ export default function TextMobileStepper3() {
     </div>
   );
 }
+
+export default SwipeableTextMobileStepper;

@@ -6,38 +6,43 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
-import SwipeableViews from 'react-swipeable-views';
-import { autoPlay } from 'react-swipeable-views-utils';
-import ContainedButtons from './BackButtonRestaurantMain';
-import ContainedButtons1 from './ButtonRestaurantMain'
-const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
+
 
 const tutorialSteps = [
   {
-    
-    label: 'Hurrycane',
+    // heading of 'restaurants near you' added
+    label: 'Restaurants Near You',
     imgPath:
+      // image path changed according to required image
       'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cmVzdGF1cmFudHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80',
   },
   {
-    label: 'Hurrycane',
+    // heading of 'restaurants near you' added
+    label: 'Restaurants Near You',
     imgPath:
-      'https://upload.wikimedia.org/wikipedia/commons/6/62/Barbieri_-_ViaSophia25668.jpg',
+      // image path changed according to required image
+      'https://assets.cntraveller.in/photos/60ba0b72ee63ec1fe6ee851e/master/pass/cecconis.jpg',
   },
   {
-    label: 'Hurrycane',
+    // heading of 'restaurants near you' added
+    label: 'Restaurants Near You',
     imgPath:
-      'https://img.etimg.com/thumb/width-1200,height-900,imgsize-829462,resizemode-1,msid-82666514/industry/services/hotels-/-restaurants/staggered-lockdowns-start-to-bite-battered-restaurants.jpg',
+      // image path changed according to required image
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIKHcxzzZIhGaWZmmQD7gjE3l3cqhC4C7lioriem6eYQ0PNQE7CjUL-VUZ8jyntbJfQMw&usqp=CAU',
   },
   {
-    label: 'Hurrycane',
+    // heading of 'restaurants near you' added
+    label: 'Restaurants Near You',
     imgPath:
-      'https://images.unsplash.com/photo-1552566626-52f8b828add9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cmVzdGF1cmFudHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80',
+      // image path changed according to required image
+      'https://www.outlookindia.com/outlooktraveller/public/uploads/articles/explore/aaheli-feature.jpg',
   },
   {
-    label: 'Hurrycane',
+    // heading of 'restaurants near you' added
+    label: 'Restaurants Near You',
     imgPath:
-      'https://www.sundayguardianlive.com/wp-content/uploads/2020/07/3-Dib-restaurant-losses-edited.jpg',
+      // image path changed according to required image
+      'https://indiarestaurant.com/wp-content/uploads/2019/04/AU_1710010_India__5591_SM-1.jpg',
   },
 ];
 
@@ -51,19 +56,18 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     height: 50,
     paddingLeft: theme.spacing(4),
-    backgroundColor: theme.palette.background.default,
-    
+
   },
   img: {
     height: 255,
-    display: 'block',
     maxWidth: 400,
     overflow: 'hidden',
+    display: 'block',
     width: '100%',
   },
 }));
 
-function SwipeableTextMobileStepper() {
+export default function TextMobileStepper2() {
   const classes = useStyles();
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
@@ -77,35 +81,17 @@ function SwipeableTextMobileStepper() {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
 
-  const handleStepChange = (step) => {
-    setActiveStep(step);
-  };
-
   return (
     <div className={classes.root}>
       <Paper square elevation={0} className={classes.header}>
-     <ContainedButtons/>
         <Typography>{tutorialSteps[activeStep].label}</Typography>
       </Paper>
-  
-      <AutoPlaySwipeableViews
+      <img
+        className={classes.img}
+        src={tutorialSteps[activeStep].imgPath}
+        alt={tutorialSteps[activeStep].label}
+      />
 
-        axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-        index={activeStep}
-        onChangeIndex={handleStepChange}
-        enableMouseEvents
-      
-      >
-        {tutorialSteps.map((step, index) => (
-          <div key={step.label}>
-            {Math.abs(activeStep - index) <= 2 ? (
-              <img className={classes.img} src={step.imgPath} alt={step.label} />
-            ) : null}
-            <ContainedButtons1/>
-          </div>
-        ))}
-      </AutoPlaySwipeableViews>
-      
       <MobileStepper
         steps={maxSteps}
         position="static"
@@ -122,10 +108,11 @@ function SwipeableTextMobileStepper() {
             {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
             Back
           </Button>
+
         }
+
       />
+
     </div>
   );
 }
-
-export default SwipeableTextMobileStepper;

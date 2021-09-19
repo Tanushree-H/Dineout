@@ -1,36 +1,34 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+// added the home page to the website
 import Home from './Pages/Home.js'
-import Gallery from './Pages/Gallery.js'
+// added the restaurant page to the website
 import RestaurantMain from './Pages/RestaurantMain.js'
-import RestaurantMenu from './Pages/RestaurantMenu.js'
-import RestaurantReview from './Pages/RestaurantReview.js'
+// component used for the bottom navigation of the website
 import SimpleBottomNavigation from './Components/BottomNavigation';
+// added the all photos page of the restaurants to the website
 import AllPhotos from './Pages/AllPhotos';
-import Intro from './Pages/Intro'
+
 function App() {
   return (
     <div className="App">
-      {/* Header (Navigation Bar) */}
-      <header className="App-header">
-      
-      </header>
       
       {/* Router - Pages */}
           <Switch>
             <Route path={process.env.PUBLIC_URL + '/'} exact > <Home/> </Route>
+            {/* Home page of the website */}
             <Route path={process.env.PUBLIC_URL + '/home'} > <Home/> </Route>
-            <Route path={process.env.PUBLIC_URL + '/gallery'}  > <Gallery/> </Route>
+            {/* Restaurant page of the website */}
             <Route path={process.env.PUBLIC_URL + '/restaurantmain'}  > <RestaurantMain/> </Route>
-            <Route path={process.env.PUBLIC_URL + '/restaurantmenu'}  > <RestaurantMenu/> </Route>
-            <Route path={process.env.PUBLIC_URL + '/restaurantreview'}  > <RestaurantReview/> </Route>
+            {/* All photos page of restaurants of the website */}
             <Route path={process.env.PUBLIC_URL + '/allphotos'}  > <AllPhotos/> </Route>
-            <Route path={process.env.PUBLIC_URL + '/intro'}  > <Intro/> </Route>
+           
           </Switch>
 
  
 
       <footer className="App-footer">
+        {/* bottom navigation bar added which will be shown on all pages */}
         <SimpleBottomNavigation/>
       </footer>
     </div>

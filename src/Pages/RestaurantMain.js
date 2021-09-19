@@ -1,8 +1,11 @@
 import React from 'react';
 import Container from '@material-ui/core/Container';
-import SwipeableTextMobileStepper from '../Components/CarouselMenuRestaurantMain';
+// Used the component for adding images of the restaurant
+import SwipeableTextMobileStepper from '../Components/ImagesRestaurantMain';
+// Used the component for tabs in the restaurant page 
 import SimpleTabs from '../Components/TabsRestaurantMain';
-import FloatingActionButtons from '../Components/Overview5';
+// Used the component for adding buttons
+import FloatingActionButtons from '../Components/ReserveTableandI';
 
 
 
@@ -10,14 +13,17 @@ import FloatingActionButtons from '../Components/Overview5';
 export default function RestaurantMain() {
   return (
     <React.Fragment>
-        <Container fixed >
-        
-        <SwipeableTextMobileStepper/>
-        <FloatingActionButtons/>
-        <SimpleTabs/>
-        
+      <Container fixed >
 
-        </Container>
+        {/* component for the initial images of the restaurant*/}
+        <SwipeableTextMobileStepper />
+        {/* component for the 'reserve a table' and 'i' button*/}
+        <FloatingActionButtons />
+        {/* component for the tabs of 'overview' , 'menu' and 'review'*/}
+        <SimpleTabs />
+
+
+      </Container>
     </React.Fragment>
   );
 }

@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
-
+// component added for adding a jist of the restaurant
 
 
 const useStyles = makeStyles({
@@ -31,13 +31,14 @@ export default function SimpleCard() {
     <Card className={classes.root}>
       <CardContent>
         <Typography className={classes.title} color="textSecondary" gutterBottom>
-        Andheri Lokhandwala, Andheri West
-        Rs. 300 for 2 | Juice, Fast Food
-        Now Closed | Opens at 11.00 AM
+          {/* Text updated to the required information */}
+          Andheri Lokhandwala, Andheri West
+          Rs. 300 for 2 | Juice, Fast Food
+          Now Closed | Opens at 11.00 AM
 
         </Typography>
       </CardContent>
-     
+
     </Card>
 
 

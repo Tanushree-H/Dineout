@@ -6,17 +6,19 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import Overview from './Overview1';
-import RecipeReviewCard1 from './Overview2';
-import BasicTextFields from './Overview3';
-import SingleLineImageList from './Overview4';
-import SimpleCard from './Overview1';
-import FloatingActionButtons from './Overview5';
+// component added for adding address, time and number of the restaurant
+import RecipeReviewCard1 from './AddressTimeRestaurant';
+// component added for adding images of 'You may also like'
+import SingleLineImageList from './YouMayAlsoLike';
+// component added for adding a jist of the restaurant
+import SimpleCard from './RestaurantJist';
+// component for adding menu images
 import BasicImageList from './RestaurantMenu';
-import RecipeReviewCard from './CardRestaurantReview1';
-import Review2 from './ReviewRestaurant2';
-import Review3 from './ReviewRestaurant3';
-import Review4 from './ReviewRestaurant4';
+// components added for reviews
+import RecipeReviewCard from './ReviewRestaurant1';
+import RecipeReviewCard2 from './ReviewRestaurant2';
+import RecipeReviewCard4 from './ReviewRestaurant4';
+import RecipeReviewCard3 from './ReviewRestaurant3';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -70,29 +72,45 @@ export default function SimpleTabs() {
     <div className={classes.root}>
       <AppBar position="static">
         <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
+          {/* tab names added */}
           <Tab label="Overview" {...a11yProps(0)} />
           <Tab label="Menu" {...a11yProps(1)} />
           <Tab label="Review" {...a11yProps(2)} />
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
-        <SimpleCard/>
-        <RecipeReviewCard1/>
-        {/* <BasicTextFields/> */}
+        {/* components added to tab 1 */}
+
+        {/* jist of restaurant */}
+        <SimpleCard />
+
+        {/* address, time and number of restaurant */}
+        <RecipeReviewCard1 />
+
+        {/* text added for heading */}
         You may also like
-        <SingleLineImageList/>
-        
+        {/* you may also like image list */}
+        <SingleLineImageList />
+
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <BasicImageList/>
-        
+
+        {/* components added to tab 2 */}
+
+        {/* image list for menu photos */}
+        <BasicImageList />
+
       </TabPanel>
       <TabPanel value={value} index={2}>
-      <RecipeReviewCard/>
-      <Review2/>
-      <Review3/>
-      <Review4/>
-      
+
+        {/* components added to tab 3 */}
+
+        {/* reviews */}
+        <RecipeReviewCard />
+        <RecipeReviewCard2 />
+        <RecipeReviewCard3 />
+        <RecipeReviewCard4 />
+
       </TabPanel>
     </div>
   );

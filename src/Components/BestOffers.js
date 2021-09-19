@@ -9,28 +9,38 @@ import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 
 const tutorialSteps = [
   {
+    // heading of 'best offers' added
     label: 'Best Offers',
     imgPath:
+      // image path changed according to required image
       'https://www.dineout.co.in/blog/wp-content/uploads/2019/06/Blog-banner.png',
   },
   {
+    // heading of 'best offers' added
     label: 'Best Offers',
     imgPath:
+      // image path changed according to required image
       'https://in.bmscdn.com/nmcms/events/banner/desktop/media-desktop-dineout-steppinout-food-festival-bangalore-0-2020-12-7-t-14-39-43.jpg',
   },
   {
+    // heading of 'best offers' added
     label: 'Best Offers',
     imgPath:
+      // image path changed according to required image
       'https://static.timescard.com/images/9796021564576588955.jpg',
   },
   {
+    // heading of 'best offers' added
     label: 'Best Offers',
     imgPath:
+      // image path changed according to required image
       'https://static.toiimg.com/photo/imgsize-86204,msid-67785906/67785906.jpg',
   },
   {
+    // heading of 'best offers' added
     label: 'Best Offers',
     imgPath:
+      // image path changed according to required image
       'https://cdn.static-zoutons.com/images/originals/blog/Revamp288_1624887920.png',
   },
 ];
@@ -45,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     height: 50,
     paddingLeft: theme.spacing(4),
-    // backgroundColor: theme.palette.background.default,
+
   },
   img: {
     height: 255,
@@ -95,13 +105,13 @@ export default function TextMobileStepper1() {
           <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
             {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
             Back
-            
+
           </Button>
-          
+
         }
-        
+
       />
-      
+
     </div>
   );
 }
