@@ -22,7 +22,7 @@ export default function FloatingActionButtons() {
     <div className={classes.root}>
 
       {/* 'reserve a table' button added */}
-      <Fab variant="extended" color="primary">
+      <Fab variant="extended" color="primary" >
         Reserve a Table
       </Fab>
       {/* 'i' button added */}

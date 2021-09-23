@@ -1,5 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+// added for linking the pages
+import {Link, Router} from "react-router-dom";
 // added for adding a button on the page
 import Button from '@material-ui/core/Button';
 // icon imported for adding back button on the page
@@ -15,19 +17,20 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function UploadButtons() {
+export default function ContainedButtons() {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
 
 
-      <label htmlFor="icon-button-file">
-        {/* component for back button on the page */}
-        <Button>
-          <ArrowBackIos />
-        </Button>
-      </label>
+     {/* connecting the all photos page to the restaurant page by adding a link to the back button */} 
+
+      <Link to={process.env.PUBLIC_URL + '/restaurantmain'}>
+      <Button variant="contained" color="primary" href="">
+      <ArrowBackIos />
+      </Button>
+      </Link>
     </div>
   );
 }

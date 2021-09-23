@@ -6,7 +6,7 @@ import ImageListItemBar from '@material-ui/core/ImageListItemBar';
 import IconButton from '@material-ui/core/IconButton';
 import StarBorderIcon from '@material-ui/icons/StarBorder';
 // images added to assets folder, were imported and named for adding in the component
-import image from '../Assets/TopPicks1.jpg'
+import image1 from '../Assets/TopPicks1.jpg'
 import image2 from '../Assets/TopPicks2.jpg'
 import image3 from '../Assets/TopPicks3.jpg'
 
@@ -38,25 +38,21 @@ const useStyles = makeStyles((theme) => ({
 const itemData = [
     {
         // Top Picks1
-        img: image,
+        img: image1,
 
         author: 'author',
     },
-];
 
-const itemData2 = [
     {
         // Top Picks2
-        img2: image2,
+        img: image2,
 
         author: 'author',
     },
-];
 
-const itemData3 = [
     {
         // Top Picks3
-        img3: image3,
+        img: image3,
 
         author: 'author',
     },
@@ -73,7 +69,7 @@ export default function SingleLineImageList() {
 
                 {/* all the images that were defined were called here. The image numbers were changed wherever required*/}
 
-                {/* Top Picks1 */}
+                
                 {itemData.map((item) => (
                     <ImageListItem key={item.img}>
                         <img src={item.img} alt={item.title} />
@@ -92,43 +88,7 @@ export default function SingleLineImageList() {
                     </ImageListItem>
                 ))}
 
-                {/* Top Picks2 */}
-                {itemData2.map((item) => (
-                    <ImageListItem key={item.img2}>
-                        <img src={item.img2} alt={item.title} />
-                        <ImageListItemBar
-                            title={item.title}
-                            classes={{
-                                root: classes.titleBar,
-                                title: classes.title,
-                            }}
-                            actionIcon={
-                                <IconButton aria-label={`star ${item.title}`}>
-                                    <StarBorderIcon className={classes.title} />
-                                </IconButton>
-                            }
-                        />
-                    </ImageListItem>
-                ))}
-
-                {/* Top Picks3 */}
-                {itemData3.map((item) => (
-                    <ImageListItem key={item.img3}>
-                        <img src={item.img3} alt={item.title} />
-                        <ImageListItemBar
-                            title={item.title}
-                            classes={{
-                                root: classes.titleBar,
-                                title: classes.title,
-                            }}
-                            actionIcon={
-                                <IconButton aria-label={`star ${item.title}`}>
-                                    <StarBorderIcon className={classes.title} />
-                                </IconButton>
-                            }
-                        />
-                    </ImageListItem>
-                ))}
+                
             </ImageList>
         </div>
     );

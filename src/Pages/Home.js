@@ -12,13 +12,19 @@ import TextMobileStepper3 from '../Components/SuperSavers';
 import SingleLineImageList from '../Components/TopPicks';
 
 
+
 export default function Home() {
   return (
+
+    <div className="App">
+    <header className="App-header">
+    <PrimarySearchAppBar/>
+    </header>
+
     <React.Fragment>
       <Container fixed>
 
-        {/* component for the search bar*/}
-        <PrimarySearchAppBar />
+       
         {/* Component for advertisements */}
         <SwipeableTextMobileStepper />
         {/* component for the 'best offers'*/}
@@ -33,8 +39,13 @@ export default function Home() {
         <TextMobileStepper3 />
 
 
-
-      </Container>
+  </Container>
     </React.Fragment>
+
+
+    <footer className="App-footer">
+        
+      </footer>
+    </div>
   );
 }

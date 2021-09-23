@@ -6,6 +6,8 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
+// added for linking the pages
+import { Link, Router } from "react-router-dom";
 
 
 const tutorialSteps = [
@@ -86,11 +88,17 @@ export default function TextMobileStepper2() {
       <Paper square elevation={0} className={classes.header}>
         <Typography>{tutorialSteps[activeStep].label}</Typography>
       </Paper>
-      <img
-        className={classes.img}
-        src={tutorialSteps[activeStep].imgPath}
-        alt={tutorialSteps[activeStep].label}
-      />
+
+      {/* connecting the 'restaurants near you' to the restaurant page by adding a link to the back button */} 
+      <Link to={process.env.PUBLIC_URL + '/restaurantmain'}>
+        <img
+          className={classes.img}
+          src={tutorialSteps[activeStep].imgPath}
+          alt={tutorialSteps[activeStep].label}
+        />
+      </Link>
+
+
 
       <MobileStepper
         steps={maxSteps}

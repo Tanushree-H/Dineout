@@ -27,11 +27,10 @@ function App() {
 
  
 
-      <footer className="App-footer">
-        {/* bottom navigation bar added which will be shown on all pages */}
+          <footer className="App-footer">
         <SimpleBottomNavigation/>
-      </footer>
-    </div>
+        </footer>
+      </div>
   );
   }
 

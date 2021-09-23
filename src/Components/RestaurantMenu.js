@@ -30,96 +30,91 @@ const useStyles = makeStyles((theme) => ({
 // all images added that were added were defined and naming was done accordingly.
 
 //Menu1
-const itemData1 = [
+const itemData = [
   {
-    img1: image1,
+    img: image1,
 
     author: 'author',
     cols: 2,
   },
-
-];
 
 //Menu2
-const itemData2 = [
   {
-    img2: image2,
+    img: image2,
 
     author: 'author',
     cols: 2,
   },
 
-];
+
 //Menu3
-const itemData3 = [
+
   {
-    img3: image3,
+    img: image3,
 
     author: 'author',
     cols: 2,
   },
 
-];
 
 //Menu4
-const itemData4 = [
+
   {
-    img4: image4,
+    img: image4,
 
     author: 'author',
     cols: 2,
   },
 
-];
+
 
 //Menu5
-const itemData5 = [
+
   {
-    img5: image5,
+    img: image5,
 
     author: 'author',
     cols: 2,
   },
 
-];
+
 
 //Menu6
-const itemData6 = [
+
   {
-    img6: image6,
+    img: image6,
 
     author: 'author',
     cols: 2,
   },
 
-];
+
 
 //Menu7
-const itemData7 = [
   {
-    img7: image7,
+    img: image7,
 
     author: 'author',
     cols: 2,
   },
 
-];
+
 
 //Menu8
-const itemData8 = [
+
   {
-    img8: image8,
+    img: image8,
 
     author: 'author',
     cols: 2,
   },
 
-];
+
 
 //Menu9
-const itemData9 = [
+
   {
-    img9: image9,
+    img: image9,
 
     author: 'author',
     cols: 2,
@@ -136,68 +131,14 @@ export default function BasicImageList() {
 
         {/* all the images that were defined were called here. The image numbers were changed wherever required*/}
 
-        {/* Menu1 */}
-        {itemData1.map((item) => (
-          <ImageListItem key={item.img1} cols={item.cols || 1}>
-            <img src={item.img1} alt={item.title} />
+        
+        {itemData.map((item) => (
+          <ImageListItem key={item.img} cols={item.cols || 1}>
+            <img src={item.img} alt={item.title} />
           </ImageListItem>
         ))}
 
-        {/* Menu2 */}
-        {itemData2.map((item) => (
-          <ImageListItem key={item.img2} cols={item.cols || 1}>
-            <img src={item.img2} alt={item.title} />
-          </ImageListItem>
-        ))}
-
-        {/* Menu3 */}
-        {itemData3.map((item) => (
-          <ImageListItem key={item.img3} cols={item.cols || 1}>
-            <img src={item.img3} alt={item.title} />
-          </ImageListItem>
-        ))}
-
-        {/* Menu4 */}
-        {itemData4.map((item) => (
-          <ImageListItem key={item.img4} cols={item.cols || 1}>
-            <img src={item.img4} alt={item.title} />
-          </ImageListItem>
-        ))}
-
-        {/* Menu5 */}
-        {itemData5.map((item) => (
-          <ImageListItem key={item.img5} cols={item.cols || 1}>
-            <img src={item.img5} alt={item.title} />
-          </ImageListItem>
-        ))}
-
-        {/* Menu6 */}
-        {itemData6.map((item) => (
-          <ImageListItem key={item.img6} cols={item.cols || 1}>
-            <img src={item.img6} alt={item.title} />
-          </ImageListItem>
-        ))}
-
-        {/* Menu7 */}
-        {itemData7.map((item) => (
-          <ImageListItem key={item.img7} cols={item.cols || 1}>
-            <img src={item.img7} alt={item.title} />
-          </ImageListItem>
-        ))}
-
-        {/* Menu8 */}
-        {itemData8.map((item) => (
-          <ImageListItem key={item.img8} cols={item.cols || 1}>
-            <img src={item.img8} alt={item.title} />
-          </ImageListItem>
-        ))}
-
-        {/* Menu9 */}
-        {itemData9.map((item) => (
-          <ImageListItem key={item.img9} cols={item.cols || 1}>
-            <img src={item.img9} alt={item.title} />
-          </ImageListItem>
-        ))}
+        
       </ImageList>
     </div>
   );
