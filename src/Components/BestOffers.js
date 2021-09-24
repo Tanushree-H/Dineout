@@ -21,7 +21,7 @@ const tutorialSteps = [
     imgPath:
       // image path changed according to required image
       'https://in.bmscdn.com/nmcms/events/banner/desktop/media-desktop-dineout-steppinout-food-festival-bangalore-0-2020-12-7-t-14-39-43.jpg',
-  },
+    },
   {
     // heading of 'best offers' added
     label: 'Best Offers',

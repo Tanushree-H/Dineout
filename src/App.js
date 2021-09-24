@@ -27,9 +27,9 @@ function App() {
 
  
 
-          <footer className="App-footer">
-        <SimpleBottomNavigation/>
-        </footer>
+           <footer className="App-footer"> 
+         <SimpleBottomNavigation/> 
+         </footer> 
       </div>
   );
   }

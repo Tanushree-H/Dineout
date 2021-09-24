@@ -8,10 +8,13 @@ const useStyles = makeStyles((theme) => ({
   root: {
     '& > *': {
       margin: theme.spacing(1),
+      position : 'relative',
+      bottom: '0',
     },
   },
   extendedIcon: {
     marginRight: theme.spacing(1),
+    
   },
 }));
 
@@ -20,7 +23,7 @@ export default function FloatingActionButtons() {
 
   return (
     <div className={classes.root}>
-
+       
       {/* 'reserve a table' button added */}
       <Fab variant="extended" color="primary" >
         Reserve a Table

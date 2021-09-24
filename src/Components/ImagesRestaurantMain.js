@@ -71,6 +71,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 400,
     overflow: 'hidden',
     width: '100%',
+    
   },
 }));
 
@@ -96,7 +97,7 @@ function SwipeableTextMobileStepper() {
     <div className={classes.root}>
       <Paper square elevation={0} className={classes.header}>
         {/* back button added */}
-        <ContainedButtons />
+         <ContainedButtons /> 
         <Typography>{tutorialSteps[activeStep].label}</Typography>
       </Paper>
 

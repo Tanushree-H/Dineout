@@ -24,13 +24,17 @@ export default function SimpleBottomNavigation() {
   const [value, setValue] = React.useState(0);
 
   return (
-    <BottomNavigation
+    <BottomNavigation position= "fixed"
+    bottom= "0"
+    
       value={value}
       onChange={(event, newValue) => {
         setValue(newValue);
+        
       }}
       showLabels
       className={classes.root}
+      
     >
       {/* all icons declared and named */}
       <BottomNavigationAction label="Home" icon={<HomeIcon />} />

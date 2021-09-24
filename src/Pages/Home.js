@@ -10,6 +10,7 @@ import TextMobileStepper2 from '../Components/RestaurantsNearYou';
 import TextMobileStepper3 from '../Components/SuperSavers';
 // Used the component for adding images in a single line
 import SingleLineImageList from '../Components/TopPicks';
+import CenteredGrid from '../Components/HomeGrid';
 
 
 
@@ -22,21 +23,22 @@ export default function Home() {
     </header>
 
     <React.Fragment>
-      <Container fixed>
+      <Container maxwidth= "lg">
 
        
         {/* Component for advertisements */}
-        <SwipeableTextMobileStepper />
+        {/* <SwipeableTextMobileStepper /> */}
         {/* component for the 'best offers'*/}
-        <TextMobileStepper1 />
+        {/* <TextMobileStepper1 /> */}
         {/* component for the 'restaurants near you*/}
-        <TextMobileStepper2 />
+        {/* <TextMobileStepper2 /> */}
         {/* Text added as heading for this category */}
-        Top Picks
+        {/* Top Picks */}
         {/* component for the 'top picks'*/}
-        <SingleLineImageList />
+        {/* <SingleLineImageList /> */}
         {/* component for the search 'super savers'*/}
-        <TextMobileStepper3 />
+        {/* <TextMobileStepper3 /> */}
+        <CenteredGrid/>
 
 
   </Container>
