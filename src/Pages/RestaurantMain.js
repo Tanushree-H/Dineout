@@ -12,15 +12,17 @@ import FloatingActionButtons from '../Components/ReserveTableandI';
 
 export default function RestaurantMain() {
   return (
+
+    
     <React.Fragment>
       <Container fixed >
 
         {/* component for the initial images of the restaurant*/}
         <SwipeableTextMobileStepper />
-        {/* component for the 'reserve a table' and 'i' button*/}
-        <FloatingActionButtons />
         {/* component for the tabs of 'overview' , 'menu' and 'review'*/}
         <SimpleTabs />
+        {/* component for the 'reserve a table' and 'i' button*/}
+        <FloatingActionButtons />
 
 
       </Container>

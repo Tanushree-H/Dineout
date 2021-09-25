@@ -92,6 +92,7 @@ export default function SimpleTabs() {
         {/* you may also like image list */}
         <SingleLineImageList />
 
+
       </TabPanel>
       <TabPanel value={value} index={1}>
 

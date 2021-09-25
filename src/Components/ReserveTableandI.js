@@ -8,8 +8,8 @@ const useStyles = makeStyles((theme) => ({
   root: {
     '& > *': {
       margin: theme.spacing(1),
-      position : 'relative',
-      bottom: '0',
+      position : 'static',
+      
     },
   },
   extendedIcon: {

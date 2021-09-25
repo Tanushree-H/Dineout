@@ -14,9 +14,9 @@ import PaymentOutlinedIcon from '@material-ui/icons/PaymentOutlined';
 import PeopleOutlineIcon from '@material-ui/icons/PeopleOutline';
 
 const useStyles = makeStyles({
-  root: {
-    width: 500,
-  },
+  // root: {
+  //   width: 500,
+  // },
 });
 
 export default function SimpleBottomNavigation() {
