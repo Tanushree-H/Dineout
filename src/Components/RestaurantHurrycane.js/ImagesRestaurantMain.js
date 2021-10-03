@@ -12,6 +12,7 @@ import { autoPlay } from 'react-swipeable-views-utils';
 import ContainedButtons from './BackButtonRestaurantMain';
 // button added for 'all photos'
 import ContainedButtons1 from './AllPhotosButton'
+import { Grid } from '@material-ui/core';
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const tutorialSteps = [
@@ -60,8 +61,8 @@ const useStyles = makeStyles((theme) => ({
   header: {
     display: 'flex',
     alignItems: 'center',
-    height: 50,
-    paddingLeft: theme.spacing(4),
+    height: 80,
+    paddingLeft: theme.spacing(1),
     backgroundColor: theme.palette.background.default,
 
   },
@@ -97,12 +98,25 @@ function SwipeableTextMobileStepper() {
 
   return (
     <div className={classes.root}>
-      <Paper square elevation={0} className={classes.header}>
+     <Paper square elevation={0} className={classes.header}>
+     <Grid container spacing={3}>
+     
+      
+      <Grid item xs={1} md= {1}>
         {/* back button added */}
          <ContainedButtons /> 
+         </Grid>
+
+         <Grid item xs={6} md={6}>
         <Typography>{tutorialSteps[activeStep].label}</Typography>
+        </Grid>
+
+        <Grid item xs={5} md={5}>
         {/* all photos button added */}
         <ContainedButtons1 />
+        </Grid>
+      
+      </Grid>
       </Paper>
 
       <AutoPlaySwipeableViews
@@ -132,18 +146,16 @@ function SwipeableTextMobileStepper() {
       <MobileStepper
         steps={maxSteps}
         position="static"
-        variant="text"
+        variant="dots"
         activeStep={activeStep}
         nextButton={
           <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
-            Next
             {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
           </Button>
         }
         backButton={
           <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
             {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
-            Back
           </Button>
         }
       />

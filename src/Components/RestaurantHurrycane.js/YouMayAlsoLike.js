@@ -6,9 +6,9 @@ import ImageListItemBar from '@material-ui/core/ImageListItemBar';
 import IconButton from '@material-ui/core/IconButton';
 import StarBorderIcon from '@material-ui/icons/StarBorder';
 // images added to assets folder, were imported and named for adding in the component
-import image from '../Assets/Youmayalsolike1.jpg'
-import image2 from '../Assets/Youmayalsolike2.jpg'
-import image3 from '../Assets/Youmayalsolike3.jpg'
+import image from '../../Assets/Youmayalsolike1.jpg'
+import image2 from '../../Assets/Youmayalsolike2.jpg'
+import image3 from '../../Assets/Youmayalsolike3.jpg'
 
 const useStyles = makeStyles((theme) => ({
   root: {

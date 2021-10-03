@@ -10,11 +10,11 @@ import Typography from '@material-ui/core/Typography';
 import { red } from '@material-ui/core/colors';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ChatBubbleOutlineRoundedIcon from '@material-ui/icons/ChatBubbleOutlineRounded';
-//Component added for adding reviews 
+//Component added for adding reviews
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 345,
+    maxWidth: 400,
   },
   media: {
     height: 0,
@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function RecipeReviewCard() {
+export default function RecipeReviewCard3() {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
@@ -49,20 +49,19 @@ export default function RecipeReviewCard() {
         avatar={
           <Avatar aria-label="recipe" className={classes.avatar}>
             {/* Text updated */}
-            R
+            N
           </Avatar>
         }
-
         //text updated
-        title="Riya Verma"
-        subheader="September 14, 2016"
+        title="Neha Ranade"
+        subheader="March 17, 2019"
       />
 
 
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
           {/* Text updated */}
-          The food quality was really good but service could have been better.
+          The non-veg dishes were much better than the veg ones.
         </Typography>
       </CardContent>
       <CardActions disableSpacing>

@@ -2,9 +2,9 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
-import CardContent from '@material-ui/core/CardContent';
-import CardActions from '@material-ui/core/CardActions';
 import Typography from '@material-ui/core/Typography';
+// component added for adding grids
+import Grid from '@material-ui/core/Grid';
 import { red } from '@material-ui/core/colors';
 // icoon imported for location
 import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
@@ -15,7 +15,9 @@ import QueryBuilderOutlinedIcon from '@material-ui/icons/QueryBuilderOutlined';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 345,
+    // maxWidth: 345,
+    flexGrow: 1,
+    textAlign: 'centre',
   },
   media: {
     height: 0,
@@ -56,38 +58,52 @@ export default function RecipeReviewCard1() {
         title="map"
       />
 
-      <CardContent>
-        <Typography variant="body2" color="textSecondary" component="p">
+      {/* grid added to components */}
+      <Grid container spacing={2} direction= "row">
+        
+      
+
+      <Grid item xs={3} md={3}>
+           {/* location icon added */}
+        <LocationOnOutlinedIcon />
+        </Grid>
+
+        <Grid item xs={9} md={9}>
+        <Typography variant="body2" color="textSecondary" component="p" className={classes.root}>
           {/* Text updated as required */}
           Society Stores, Lokhandwala Complex,
           Near Sanghavi Hospital, Andheri West,
           Mumbai - 400053.
         </Typography>
+        </Grid>
+        
+        
+        <Grid item xs={3} md={3}>
+          {/* phone icon added */}
+          <PhoneOutlinedIcon />
+          </Grid>
 
-        <Typography variant="body2" color="textSecondary" component="p">
+          <Grid item xs={9} md={9}>
+          <Typography variant="body2" color="textSecondary" component="p"className={classes.root}>
           {/* Text updated as required */}
           +91 90040 81700
         </Typography>
+        </Grid>
 
-        <Typography variant="body2" color="textSecondary" component="p">
-          {/* Text updated as required */}
+        <Grid item xs={3} md={3}>
+          {/* clock icon added */}
+        <QueryBuilderOutlinedIcon />
+        </Grid>
+
+        <Grid item xs={9} md={9}>
+        <Typography variant="body2" color="textSecondary" component="p" className={classes.root}>
+        {/* Text updated as required */}
           11am - 11pm
         </Typography>
+        </Grid>
 
-      </CardContent>
-      <CardActions disableSpacing>
-
-        {/* location icon added */}
-        <LocationOnOutlinedIcon />
-
-        {/* phone icon added */}
-        <PhoneOutlinedIcon />
-
-        {/* clock icon added */}
-        <QueryBuilderOutlinedIcon />
-
-
-      </CardActions>
+       
+       </Grid>
 
     </Card>
   );

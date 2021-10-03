@@ -7,16 +7,16 @@ import ListSubheader from '@material-ui/core/ListSubheader';
 import IconButton from '@material-ui/core/IconButton';
 import InfoIcon from '@material-ui/icons/Info';
 // images added to assets folder, were imported and named for adding in the component
-import image1 from '../Assets/AllPhotos1.jpg';
-import image2 from '../Assets/AllPhotos2.jfif';
-import image3 from '../Assets/AllPhotos3.jfif';
-import image4 from '../Assets/AllPhotos4.jfif';
-import image5 from '../Assets/AllPhotos5.jpg';
-import image6 from '../Assets/AllPhotos6.jpg';
-import image7 from '../Assets/AllPhotos7.jfif';
-import image8 from '../Assets/AllPhotos8.jpg';
-import image9 from '../Assets/AllPhotos9.jpg';
-import image10 from '../Assets/AllPhotos10.jpg';
+import image1 from '../../Assets/AllPhotos1.jpg';
+import image2 from '../../Assets/AllPhotos2.jfif';
+import image3 from '../../Assets/AllPhotos3.jfif';
+import image4 from '../../Assets/AllPhotos4.jfif';
+import image5 from '../../Assets/AllPhotos5.jpg';
+import image6 from '../../Assets/AllPhotos6.jpg';
+import image7 from '../../Assets/AllPhotos7.jfif';
+import image8 from '../../Assets/AllPhotos8.jpg';
+import image9 from '../../Assets/AllPhotos9.jpg';
+import image10 from '../../Assets/AllPhotos10.jpg';
 
 const useStyles = makeStyles((theme) => ({
   root: {

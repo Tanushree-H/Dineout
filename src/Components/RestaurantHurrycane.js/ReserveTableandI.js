@@ -8,9 +8,10 @@ const useStyles = makeStyles((theme) => ({
   root: {
     '& > *': {
       margin: theme.spacing(1),
-      position : 'static',
+      // position : 'static',
       
     },
+    
   },
   extendedIcon: {
     marginRight: theme.spacing(1),
@@ -20,16 +21,33 @@ const useStyles = makeStyles((theme) => ({
 
 export default function FloatingActionButtons() {
   const classes = useStyles();
+  const style = {
+    margin: 0,
+    top: 'auto',
+    right: 'auto',
+    bottom: 80,
+    left: 80,
+    position: 'fixed',
+};
 
+const style1 = {
+  margin: 0,
+  top: 'auto',
+  right: 'auto',
+  bottom: 80,
+  left: 280,
+  position: 'fixed',
+};
   return (
     <div className={classes.root}>
        
       {/* 'reserve a table' button added */}
-      <Fab variant="extended" color="primary" >
+      <Fab variant="extended" color="primary" style={style}
+ >
         Reserve a Table
       </Fab>
       {/* 'i' button added */}
-      <Fab variant="extended" color="primary">
+      <Fab variant="extended" color="primary" style={style1}>
         i
       </Fab>
     </div>

@@ -19,9 +19,14 @@ import RecipeReviewCard from './ReviewRestaurant1';
 import RecipeReviewCard2 from './ReviewRestaurant2';
 import RecipeReviewCard4 from './ReviewRestaurant4';
 import RecipeReviewCard3 from './ReviewRestaurant3';
+// component for adding grids
+import Grid from '@material-ui/core/Grid';
+// component for adding text on paper
+import { Paper } from '@material-ui/core';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
+  
 
   return (
     <div
@@ -57,6 +62,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     backgroundColor: theme.palette.background.paper,
+    textAlign: 'center'
   },
 }));
 
@@ -71,48 +77,81 @@ export default function SimpleTabs() {
   return (
     <div className={classes.root}>
       <AppBar position="static">
-        <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
+        <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" centered>
           {/* tab names added */}
           <Tab label="Overview" {...a11yProps(0)} />
           <Tab label="Menu" {...a11yProps(1)} />
           <Tab label="Review" {...a11yProps(2)} />
         </Tabs>
       </AppBar>
-      <TabPanel value={value} index={0}>
-        {/* components added to tab 1 */}
 
+      {/* added grid to every component */}
+
+      
+
+      <TabPanel value={value} index={0}>
+
+      <Grid container spacing={5}>
+
+        {/* components added to tab 1 */}
+        <Grid item xs={12} md={12}>
         {/* jist of restaurant */}
         <SimpleCard />
-
+        </Grid>
+        
+        <Grid item xs={12} md={12}>
         {/* address, time and number of restaurant */}
         <RecipeReviewCard1 />
-
-        {/* text added for heading */}
-        You may also like
+        </Grid>
+        
+        <Grid item xs={12} md={12}>
+          {/* text added for heading */}
+        <Paper className={classes.paper}>You may also like</Paper>
         {/* you may also like image list */}
         <SingleLineImageList />
-
+        </Grid>
+        </Grid>
 
       </TabPanel>
       <TabPanel value={value} index={1}>
+      <Grid container spacing={5}>
 
         {/* components added to tab 2 */}
 
+        <Grid item xs={12} md={12}>
         {/* image list for menu photos */}
         <BasicImageList />
+        </Grid>
+        </Grid>
 
       </TabPanel>
       <TabPanel value={value} index={2}>
+      <Grid container spacing={5}>
 
         {/* components added to tab 3 */}
 
         {/* reviews */}
-        <RecipeReviewCard />
-        <RecipeReviewCard2 />
-        <RecipeReviewCard3 />
-        <RecipeReviewCard4 />
 
+        <Grid item xs={12} md={12}>
+        <RecipeReviewCard />
+        </Grid>
+
+        <Grid item xs={12} md={12}>
+        <RecipeReviewCard2 />
+        </Grid>
+
+        <Grid item xs={12} md={12}>
+        <RecipeReviewCard3 />
+        </Grid>
+
+        <Grid item xs={12} md={12}>
+        <RecipeReviewCard4 />
+        </Grid>
+
+
+        </Grid>
       </TabPanel>
+      
     </div>
   );
 }

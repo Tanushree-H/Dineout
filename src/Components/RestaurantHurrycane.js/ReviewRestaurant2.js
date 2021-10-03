@@ -10,11 +10,11 @@ import Typography from '@material-ui/core/Typography';
 import { red } from '@material-ui/core/colors';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ChatBubbleOutlineRoundedIcon from '@material-ui/icons/ChatBubbleOutlineRounded';
-//Component added for adding reviews 
+//Component added for adding reviews
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 345,
+    maxWidth: 400,
   },
   media: {
     height: 0,
@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function RecipeReviewCard4() {
+export default function RecipeReviewCard2() {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
@@ -53,15 +53,15 @@ export default function RecipeReviewCard4() {
           </Avatar>
         }
         //text updated
-        title="Ashish Chanchlani"
-        subheader="May 17, 2018"
+        title="Ankush Sharma"
+        subheader="December 27, 2019"
       />
 
 
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
           {/* Text updated */}
-          Lovely food.
+          Loved the ambience, loved the food.
         </Typography>
       </CardContent>
       <CardActions disableSpacing>

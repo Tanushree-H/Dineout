@@ -32,9 +32,31 @@ export default function SimpleCard() {
       <CardContent>
         <Typography className={classes.title} color="textSecondary" gutterBottom>
           {/* Text updated to the required information */}
-          Andheri Lokhandwala, Andheri West
-          Rs. 300 for 2 | Juice, Fast Food
-          Now Closed | Opens at 11.00 AM
+          Andheri Lokhandwala, Andheri West 
+          
+
+        </Typography>
+
+        <Typography className={classes.title} color="textSecondary" gutterBottom>
+          {/* Text updated to the required information */}
+         
+          Rs. 300 for 2 
+         
+
+        </Typography>
+
+        <Typography className={classes.title} color="textSecondary" gutterBottom>
+          {/* Text updated to the required information */}
+          
+           Juice, Fast Food 
+          
+
+        </Typography>
+
+        <Typography className={classes.title} color="textSecondary" gutterBottom>
+          {/* Text updated to the required information */}
+          
+           Opens at 11.00 AM
 
         </Typography>
       </CardContent>

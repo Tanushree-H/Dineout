@@ -2,16 +2,17 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
-// icon for home
-import HomeIcon from '@material-ui/icons/Home';
-// icon for book a table
-import LocalDiningOutlinedIcon from '@material-ui/icons/LocalDiningOutlined';
-// icon for dineout passport
-import CardMembershipOutlinedIcon from '@material-ui/icons/CardMembershipOutlined';
-// icon for payment
-import PaymentOutlinedIcon from '@material-ui/icons/PaymentOutlined';
-// icon for community
-import PeopleOutlineIcon from '@material-ui/icons/PeopleOutline';
+import { IconButton } from '@material-ui/core';
+// image for home
+import Home from '../Assets/Home.png';
+// image for book a table
+import BookATable from '../Assets/BookATable.png';
+// image for dineout passport
+import DineoutPassport from '../Assets/DineoutPassport.png';
+// image for payment
+import Payment from '../Assets/Payment.png';
+// image for community
+import Community from '../Assets/Community.png';
 
 const useStyles = makeStyles({
   // root: {
@@ -37,11 +38,26 @@ export default function SimpleBottomNavigation() {
       
     >
       {/* all icons declared and named */}
-      <BottomNavigationAction label="Home" icon={<HomeIcon />} />
-      <BottomNavigationAction label="Book a Table" icon={<LocalDiningOutlinedIcon />} />
-      <BottomNavigationAction label="Dineout Passport" icon={<CardMembershipOutlinedIcon />} />
-      <BottomNavigationAction label="Payment" icon={<PaymentOutlinedIcon />} />
-      <BottomNavigationAction label="Community" icon={<PeopleOutlineIcon />} />
+      <BottomNavigationAction label="Home" icon={<IconButton > 
+        <img src={Home} height={40} width={40}/>
+          </IconButton>} />
+
+      <BottomNavigationAction label="Book a Table" icon={<IconButton>
+        <img src={BookATable} height={40} width={50}/>
+          </IconButton>} />
+
+      <BottomNavigationAction label="Dineout Passport" icon={<IconButton>
+        <img src={DineoutPassport} height={40} width={60}/>
+          </IconButton>} />
+
+      <BottomNavigationAction label="Payment" icon={<IconButton>
+        <img src={Payment} height={40} width={70}/>
+          </IconButton>} />
+
+      <BottomNavigationAction label="Community" icon={<IconButton>
+        <img src={Community} height={40} width={50}/>
+          </IconButton>} />
+
     </BottomNavigation>
   );
 }

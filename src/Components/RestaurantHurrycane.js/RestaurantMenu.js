@@ -3,15 +3,15 @@ import { makeStyles } from '@material-ui/core/styles';
 import ImageList from '@material-ui/core/ImageList';
 import ImageListItem from '@material-ui/core/ImageListItem';
 // images added to assets folder, were imported and named for adding in the component
-import image1 from '../Assets/Menu1.jpg';
-import image2 from '../Assets/Menu2.jpg';
-import image3 from '../Assets/Menu3.jpg';
-import image4 from '../Assets/Menu4.jpg';
-import image5 from '../Assets/Menu5.jpg';
-import image6 from '../Assets/Menu6.jpg';
-import image7 from '../Assets/Menu7.jpg';
-import image8 from '../Assets/Menu8.jpg';
-import image9 from '../Assets/Menu9.jpg';
+import image1 from '../../Assets/Menu1.jpg';
+import image2 from '../../Assets/Menu2.jpg';
+import image3 from '../../Assets/Menu3.jpg';
+import image4 from '../../Assets/Menu4.jpg';
+import image5 from '../../Assets/Menu5.jpg';
+import image6 from '../../Assets/Menu6.jpg';
+import image7 from '../../Assets/Menu7.jpg';
+import image8 from '../../Assets/Menu8.jpg';
+import image9 from '../../Assets/Menu9.jpg';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,6 +24,10 @@ const useStyles = makeStyles((theme) => ({
   imageList: {
     width: 500,
     height: 450,
+    alignItems: 'center',
+    alignContent: 'center',
+    justify: 'center'
+    
   },
 }));
 
@@ -127,7 +131,7 @@ export default function BasicImageList() {
 
   return (
     <div className={classes.root}>
-      <ImageList rowHeight={160} className={classes.imageList} cols={3}>
+      <ImageList rowHeight={160} className={classes.imageList} cols={3} alignContent= 'center' alignItems= 'center'>
 
         {/* all the images that were defined were called here. The image numbers were changed wherever required*/}
 

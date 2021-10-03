@@ -30,18 +30,7 @@ const tutorialSteps = [
       // image path changed according to required image
       'https://i.ytimg.com/vi/10dQARfBy7U/maxresdefault.jpg',
   },
-  {
-
-    imgPath:
-      // image path changed according to required image
-      'https://blog.dineout-cdn.co.in/blog/wp-content/uploads/2019/01/blog_banner.png',
-  },
-  {
-
-    imgPath:
-      // image path changed according to required image
-      'https://i.ytimg.com/vi/IkUfD1lLgQ4/maxresdefault.jpg',
-  },
+ 
 ];
 
 const useStyles = makeStyles((theme) => ({
@@ -100,18 +89,16 @@ function SwipeableTextMobileStepper() {
       <MobileStepper
         steps={maxSteps}
         position="static"
-        variant="text"
+        variant="dots"
         activeStep={activeStep}
         nextButton={
-          <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
-            Next
+          <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps -1}>
             {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
           </Button>
         }
         backButton={
           <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
             {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
-            Back
           </Button>
         }
       />

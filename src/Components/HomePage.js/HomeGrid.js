@@ -30,35 +30,35 @@ export default function CenteredGrid() {
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={3}>
-        <Grid item xs={12}>
-          {/* Component for the search bar */}
-        <PrimarySearchAppBar/>
+      <Grid container spacing={5}
+      direction= "column"
+      alignItems="center"
+      justify="center"
+      style={{ minHeight: '100vh' }}
+>
+        <Grid item xs={12} md={12}>
         </Grid>
-        <Grid item xs={12}>
+        <Grid item xs={12} md={12}>
              {/* Component for advertisements */}
           <SwipeableTextMobileStepper/>
         </Grid>
-        <Grid item xs={12}>
+        <Grid item xs={12} md={12}>
           {/* component for the 'best offers'*/}
           <TextMobileStepper1/>
         </Grid>
-        <Grid item xs={12}>
+        <Grid item xs={12} md={12}>
           {/* component for the 'restaurants near you*/}
           <TextMobileStepper2/>
         </Grid>
-        <Grid item xs={12}>
+        <Grid item xs={12} md={12}>
           {/* Paper added for adding text */}
-          <Paper className={classes.paper}>
-          <Paper elevation={0} />
+          <Paper square elevation={0} className={classes.paper}>
             Top Picks
             </Paper>
-        </Grid>
-        <Grid item xs={12}>
           {/* component for the 'top picks'*/}
           <SingleLineImageList/>
         </Grid>
-        <Grid item xs={12}>
+        <Grid item xs={12} md={12}>
           {/* component for the search 'super savers'*/}
           <TextMobileStepper3/>
         </Grid>

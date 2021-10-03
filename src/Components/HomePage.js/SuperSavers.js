@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
+import { Grid } from '@material-ui/core';
 
 const tutorialSteps = [
   {
@@ -14,6 +15,12 @@ const tutorialSteps = [
     imgPath:
       // image path changed according to required image
       'https://restaurantindia.s3.ap-south-1.amazonaws.com/s3fs-public/content12671.jpg',
+       // information about restaurant
+       name : 'Raj Bhog',
+      cuisine1 :'Indian',
+      cuisine2 : 'Fusion',
+      cuisine3 : 'Continental',
+      body : '402, Star Mall, Dadar'
   },
   {
     // heading of 'super savers' added
@@ -21,6 +28,12 @@ const tutorialSteps = [
     imgPath:
       // image path changed according to required image
       'https://media.architecturaldigest.in/wp-content/uploads/2019/02/Ministry-of-Crab-Khar-Mumbai-5.jpg',
+      // information about restaurant
+       name : 'Island Grill',
+      cuisine1 :'Indian',
+      cuisine2 : 'Italian',
+      cuisine3 : 'Mughlai',
+      body : 'Viman Nagar, Andheri west'
   },
   {
     // heading of 'super savers' added
@@ -28,21 +41,14 @@ const tutorialSteps = [
     imgPath:
       // image path changed according to required image
       'https://assets.gqindia.com/photos/5e79f8f1daa717000852d708/master/w_1600%2Cc_limit/Bhukhara-New-Delhi.jpg',
+       // information about restaurant
+       name : 'Pizzeria',
+      cuisine1 :'Indian',
+      cuisine2 : 'Fusion',
+      cuisine3 : 'Continental',
+      body : '402, Star Mall, Dadar'
   },
-  {
-    // heading of 'super savers' added
-    label: 'Super Savers',
-    imgPath:
-      // image path changed according to required image
-      'https://images.indianexpress.com/2017/12/indian-accent-restaurant_759.jpg',
-  },
-  {
-    // heading of 'super savers' added
-    label: 'Super Savers',
-    imgPath:
-      // image path changed according to required image
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8e1gYdwl0d3exi6UIERBl9mGfufW1PHgj5A&usqp=CAU',
-  },
+  
 ];
 
 const useStyles = makeStyles((theme) => ({
@@ -54,8 +60,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     height: 50,
-    paddingLeft: theme.spacing(4),
-    // backgroundColor: theme.palette.background.default,
+    paddingLeft: theme.spacing(1),
   },
   img: {
     height: 255,
@@ -90,21 +95,64 @@ export default function TextMobileStepper3() {
         src={tutorialSteps[activeStep].imgPath}
         alt={tutorialSteps[activeStep].label}
       />
+
+       {/* added grid to text below the images */}
+
+        {/* added text below images  */}
+        
+        <Grid container spacing={1}direction="row"
+          alignContent="center"
+          alignItems="center"
+>
+        <Grid item xs={4}>
+       <Paper square elevation={0} className={classes.header}>
+        <Typography>
+          {tutorialSteps[activeStep].name}
+          </Typography>
+      </Paper>
+      </Grid>
+
+      
+      <Paper square elevation={0} className={classes.header}>
+      <Grid item xs={4}>
+        <Typography>
+          {tutorialSteps[activeStep].cuisine1}
+          </Typography>
+          </Grid>
+          <Grid item xs={4}>
+          <Typography>
+          {tutorialSteps[activeStep].cuisine2}
+          </Typography>
+          </Grid>
+          <Grid item xs={4}>
+          <Typography>
+          {tutorialSteps[activeStep].cuisine3}
+          </Typography>
+          </Grid>
+      </Paper>
+    
+
+      <Grid item xs={12}>
+      <Paper square elevation={0} className={classes.header}>
+        <Typography>
+          {tutorialSteps[activeStep].body}
+          </Typography>
+      </Paper>
+      </Grid>
+      </Grid>
       <MobileStepper
         steps={maxSteps}
         position="static"
-        variant="text"
+        variant="dots"
         activeStep={activeStep}
         nextButton={
-          <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
-            Next
+          <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps -1}>
             {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
           </Button>
         }
         backButton={
           <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
             {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
-            Back
           </Button>
         }
       />

@@ -27,21 +27,7 @@ const tutorialSteps = [
     label: 'Best Offers',
     imgPath:
       // image path changed according to required image
-      'https://static.timescard.com/images/9796021564576588955.jpg',
-  },
-  {
-    // heading of 'best offers' added
-    label: 'Best Offers',
-    imgPath:
-      // image path changed according to required image
-      'https://static.toiimg.com/photo/imgsize-86204,msid-67785906/67785906.jpg',
-  },
-  {
-    // heading of 'best offers' added
-    label: 'Best Offers',
-    imgPath:
-      // image path changed according to required image
-      'https://cdn.static-zoutons.com/images/originals/blog/Revamp288_1624887920.png',
+      'https://mma.prnewswire.com/media/1446335/GRIF_by_Dineout.jpg?w=500',
   },
 ];
 
@@ -54,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     height: 50,
-    paddingLeft: theme.spacing(4),
+    paddingLeft: theme.spacing(1),
 
   },
   img: {
@@ -93,19 +79,17 @@ export default function TextMobileStepper1() {
       <MobileStepper
         steps={maxSteps}
         position="static"
-        variant="text"
+        variant="dots"
         activeStep={activeStep}
+        className={classes.root}
         nextButton={
-          <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
-            Next
+          <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps -1}>
             {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
           </Button>
         }
         backButton={
           <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
             {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
-            Back
-
           </Button>
 
         }

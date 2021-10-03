@@ -8,44 +8,55 @@ import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 // added for linking the pages
 import { Link, Router } from "react-router-dom";
+// component added for adding grids
+import { Grid } from '@material-ui/core';
 
 
 const tutorialSteps = [
   {
-    // heading of 'restaurants near you' added
+    // heading  added
     label: 'Restaurants Near You',
     imgPath:
       // image path changed according to required image
       'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cmVzdGF1cmFudHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80',
-  },
+    // information about restaurant
+    name : 'Hurrycane',
+    cuisine1 :'Mexican',
+    cuisine2 : 'Chinese',
+    cuisine3 : 'Continental',
+    body : '101, Lokhandwala, Andheri west'
+    
+    },
   {
-    // heading of 'restaurants near you' added
+    
+    // heading  added
     label: 'Restaurants Near You',
     imgPath:
       // image path changed according to required image
       'https://assets.cntraveller.in/photos/60ba0b72ee63ec1fe6ee851e/master/pass/cecconis.jpg',
+      // information about restaurant
+      name : 'Pop Tates',
+    cuisine1 :'American',
+    cuisine2 : 'Japanese',
+    cuisine3 : 'Continental',
+    body : 'Opp Inox theatre, Nariman Theatre '
+    
   },
   {
-    // heading of 'restaurants near you' added
-    label: 'Restaurants Near You',
+    
+   // heading  added
+   label: 'Restaurants Near You',
     imgPath:
       // image path changed according to required image
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIKHcxzzZIhGaWZmmQD7gjE3l3cqhC4C7lioriem6eYQ0PNQE7CjUL-VUZ8jyntbJfQMw&usqp=CAU',
-  },
-  {
-    // heading of 'restaurants near you' added
-    label: 'Restaurants Near You',
-    imgPath:
-      // image path changed according to required image
-      'https://www.outlookindia.com/outlooktraveller/public/uploads/articles/explore/aaheli-feature.jpg',
-  },
-  {
-    // heading of 'restaurants near you' added
-    label: 'Restaurants Near You',
-    imgPath:
-      // image path changed according to required image
-      'https://indiarestaurant.com/wp-content/uploads/2019/04/AU_1710010_India__5591_SM-1.jpg',
-  },
+     // information about restaurant
+      name : 'Chillies',
+      cuisine1 :'Mexican',
+      cuisine2 : 'Chinese',
+      cuisine3 : 'Continental',
+      body : 'Sadashiv Road, Mahim '
+    },
+  
 ];
 
 const useStyles = makeStyles((theme) => ({
@@ -53,13 +64,18 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 400,
     flexGrow: 1,
   },
+
+
   header: {
     display: 'flex',
-    alignItems: 'center',
     height: 50,
-    paddingLeft: theme.spacing(4),
+    alignItems: 'center',
+    fontSize:18,
+    paddingLeft: theme.spacing(1),
+
 
   },
+
   img: {
     height: 255,
     maxWidth: 400,
@@ -85,6 +101,7 @@ export default function TextMobileStepper2() {
 
   return (
     <div className={classes.root}>
+
       <Paper square elevation={0} className={classes.header}>
         <Typography>{tutorialSteps[activeStep].label}</Typography>
       </Paper>
@@ -94,27 +111,69 @@ export default function TextMobileStepper2() {
         <img
           className={classes.img}
           src={tutorialSteps[activeStep].imgPath}
-          alt={tutorialSteps[activeStep].label}
         />
-      </Link>
+        </Link>
 
 
+        {/* added grid to text below the images */}
 
+        {/* added text below images  */}
+        
+        <Grid container spacing={1}direction="row"
+          alignContent="center"
+          alignItems="center"
+>
+        <Grid item xs={4}>
+       <Paper square elevation={0} className={classes.header}>
+        <Typography>
+          {tutorialSteps[activeStep].name}
+          </Typography>
+      </Paper>
+      </Grid>
+
+      
+      <Paper square elevation={0} className={classes.header}>
+      <Grid item xs={4}>
+        <Typography>
+          {tutorialSteps[activeStep].cuisine1}
+          </Typography>
+          </Grid>
+          <Grid item xs={4}>
+          <Typography>
+          {tutorialSteps[activeStep].cuisine2}
+          </Typography>
+          </Grid>
+          <Grid item xs={4}>
+          <Typography>
+          {tutorialSteps[activeStep].cuisine3}
+          </Typography>
+          </Grid>
+      </Paper>
+    
+
+      <Grid item xs={12}>
+      <Paper square elevation={0} className={classes.header}>
+        <Typography>
+          {tutorialSteps[activeStep].body}
+          </Typography>
+      </Paper>
+      </Grid>
+      </Grid>
+
+       
       <MobileStepper
         steps={maxSteps}
         position="static"
-        variant="text"
+        variant="dots"
         activeStep={activeStep}
         nextButton={
-          <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
-            Next
+          <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps -1}>
             {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
           </Button>
         }
         backButton={
-          <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+          <Button size="small" onClick={handleBack} disabled={activeStep ===  0}>
             {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
-            Back
           </Button>
 
         }
