@@ -62,7 +62,8 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     height: 80,
-    paddingLeft: theme.spacing(1),
+    paddingLeft: theme.spacing(0),
+    paddingRight: theme.spacing(0),
     backgroundColor: theme.palette.background.default,
 
   },
@@ -99,7 +100,11 @@ function SwipeableTextMobileStepper() {
   return (
     <div className={classes.root}>
      <Paper square elevation={0} className={classes.header}>
-     <Grid container spacing={3}>
+     <Grid container spacing={0} direction= "row"
+       alignItems="center"
+       justify="center"
+       style={{ minHeight: '100vh' }}
+       >
      
       
       <Grid item xs={1} md= {1}>

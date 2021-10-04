@@ -131,7 +131,7 @@ export default function BasicImageList() {
 
   return (
     <div className={classes.root}>
-      <ImageList rowHeight={160} className={classes.imageList} cols={3} alignContent= 'center' alignItems= 'center'>
+      <ImageList rowHeight={160} className={classes.imageList} cols={4} alignContent= 'center' alignItems= 'center'>
 
         {/* all the images that were defined were called here. The image numbers were changed wherever required*/}
 
