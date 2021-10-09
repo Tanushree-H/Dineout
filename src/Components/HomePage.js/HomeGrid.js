@@ -31,38 +31,50 @@ export default function CenteredGrid() {
   return (
     <div className={classes.root}>
       <Grid container spacing={5}
-      direction= "column"
-      alignItems="center"
-      justify="center"
-      style={{ minHeight: '100vh' }}
->
+        direction="column"
+        alignItems="center"
+        justify="center"
+        style={{ minHeight: '100vh' }}
+      >
+
+        {/* Grid added to all the components on the home page  */}
+
+        {/* added for maintaining spacing  */}
         <Grid item xs={12} md={12}>
+          <Paper square elevation={0} className={classes.paper}></Paper>
+          <Paper square elevation={0} className={classes.paper}></Paper>
         </Grid>
+
+        {/* Component for advertisements */}
         <Grid item xs={12} md={12}>
-             {/* Component for advertisements */}
-          <SwipeableTextMobileStepper/>
+          <SwipeableTextMobileStepper />
         </Grid>
+
+        {/* component for the 'best offers'*/}
         <Grid item xs={12} md={12}>
-          {/* component for the 'best offers'*/}
-          <TextMobileStepper1/>
+          <TextMobileStepper1 />
         </Grid>
+
+        {/* component for the 'restaurants near you*/}
         <Grid item xs={12} md={12}>
-          {/* component for the 'restaurants near you*/}
-          <TextMobileStepper2/>
+          <TextMobileStepper2 />
         </Grid>
+
+        {/* component for the 'top picks'*/}
         <Grid item xs={12} md={12}>
           {/* Paper added for adding text */}
           <Paper square elevation={0} className={classes.paper}>
             Top Picks
-            </Paper>
-          {/* component for the 'top picks'*/}
-          <SingleLineImageList/>
+          </Paper>
+          <SingleLineImageList />
         </Grid>
+
+        {/* component for the search 'super savers'*/}
         <Grid item xs={12} md={12}>
-          {/* component for the search 'super savers'*/}
-          <TextMobileStepper3/>
+          <TextMobileStepper3 />
         </Grid>
       </Grid>
+
     </div>
   );
 }

@@ -67,9 +67,8 @@ export default function SingleLineImageList() {
         <div className={classes.root}>
             <ImageList className={classes.imageList} cols={2.0}>
 
-                {/* all the images that were defined were called here. The image numbers were changed wherever required*/}
+                {/* all the images that were defined were called here.*/}
 
-                
                 {itemData.map((item) => (
                     <ImageListItem key={item.img}>
                         <img src={item.img} alt={item.title} />
@@ -88,7 +87,7 @@ export default function SingleLineImageList() {
                     </ImageListItem>
                 ))}
 
-                
+
             </ImageList>
         </div>
     );

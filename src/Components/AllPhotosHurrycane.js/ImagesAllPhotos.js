@@ -126,9 +126,8 @@ export default function TitlebarImageList() {
           <ListSubheader component="div"></ListSubheader>
         </ImageListItem>
 
-        {/* all the images that were defined were called here. The image numbers were changed wherever required*/}
+        {/* all the images that were defined were called here*/}
 
-        
         {itemData.map((item) => (
           <ImageListItem key={item.img}>
             <img src={item.img} alt={item.title} />
@@ -144,7 +143,7 @@ export default function TitlebarImageList() {
           </ImageListItem>
         ))}
 
-       
+
       </ImageList>
     </div>
   );

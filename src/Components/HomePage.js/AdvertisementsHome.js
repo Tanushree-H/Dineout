@@ -30,7 +30,7 @@ const tutorialSteps = [
       // image path changed according to required image
       'https://i.ytimg.com/vi/10dQARfBy7U/maxresdefault.jpg',
   },
- 
+
 ];
 
 const useStyles = makeStyles((theme) => ({
@@ -92,7 +92,7 @@ function SwipeableTextMobileStepper() {
         variant="dots"
         activeStep={activeStep}
         nextButton={
-          <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps -1}>
+          <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
             {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
           </Button>
         }

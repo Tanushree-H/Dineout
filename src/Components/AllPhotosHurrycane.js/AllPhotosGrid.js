@@ -5,6 +5,8 @@ import Grid from '@material-ui/core/Grid';
 import ContainedButtons from './BackButtonAllPhotos';
 // Used the component for displaying all the images on the page along with showing who has uploaded it
 import TitlebarImageList from './ImagesAllPhotos';
+// Used the component for adding text
+import { Paper } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -23,30 +25,35 @@ export default function CenteredGrid2() {
 
   return (
     <div className={classes.root}>
+
+
       {/* grid added */}
       <Grid container spacing={0.1}
        direction= "row"
        alignItems="center"
        justify="center"
-       style={{ minHeight: '100vh' }}
+       style={{ minHeight: '85vh' }}
        >
         
         
       
-
+        {/* component for back button */}
            <Grid item xs={2} md={2}>
-             {/* back button */}
            <ContainedButtons/>
            </Grid>
 
-           <Grid item xs={8} md={8}>
-           {/* component added for text */}
-           All Photos
-           </Grid>
-          
 
+          {/* component for heading text */}
+           <Grid item xs={8} md={8}>
+              {/* Paper added for adding text */}
+          <Paper square elevation={0} className={classes.paper}>
+           All Photos
+           </Paper>
+           </Grid>
+           
+          
+ {/* component for the images' */}
         <Grid item xs={12} md={12}>
-             {/* component for the images' */}
           <TitlebarImageList/>
         </Grid>    
       </Grid>

@@ -15,12 +15,12 @@ const tutorialSteps = [
     imgPath:
       // image path changed according to required image
       'https://restaurantindia.s3.ap-south-1.amazonaws.com/s3fs-public/content12671.jpg',
-       // information about restaurant
-       name : 'Raj Bhog',
-      cuisine1 :'Indian',
-      cuisine2 : 'Fusion',
-      cuisine3 : 'Continental',
-      body : '402, Star Mall, Dadar'
+    // information about restaurant
+    name: 'Raj Bhog',
+    cuisine1: 'Indian',
+    cuisine2: 'Fusion',
+    cuisine3: 'Continental',
+    body: '402, Star Mall, Dadar'
   },
   {
     // heading of 'super savers' added
@@ -28,12 +28,12 @@ const tutorialSteps = [
     imgPath:
       // image path changed according to required image
       'https://media.architecturaldigest.in/wp-content/uploads/2019/02/Ministry-of-Crab-Khar-Mumbai-5.jpg',
-      // information about restaurant
-       name : 'Island Grill',
-      cuisine1 :'Indian',
-      cuisine2 : 'Italian',
-      cuisine3 : 'Mughlai',
-      body : 'Viman Nagar, Andheri west'
+    // information about restaurant
+    name: 'Island Grill',
+    cuisine1: 'Indian',
+    cuisine2: 'Italian',
+    cuisine3: 'Mughlai',
+    body: 'Viman Nagar, Andheri west'
   },
   {
     // heading of 'super savers' added
@@ -41,14 +41,14 @@ const tutorialSteps = [
     imgPath:
       // image path changed according to required image
       'https://assets.gqindia.com/photos/5e79f8f1daa717000852d708/master/w_1600%2Cc_limit/Bhukhara-New-Delhi.jpg',
-       // information about restaurant
-       name : 'Pizzeria',
-      cuisine1 :'Indian',
-      cuisine2 : 'Fusion',
-      cuisine3 : 'Continental',
-      body : '402, Star Mall, Dadar'
+    // information about restaurant
+    name: 'Pizzeria',
+    cuisine1: 'Indian',
+    cuisine2: 'Fusion',
+    cuisine3: 'Continental',
+    body: '402, Star Mall, Dadar'
   },
-  
+
 ];
 
 const useStyles = makeStyles((theme) => ({
@@ -96,49 +96,54 @@ export default function TextMobileStepper3() {
         alt={tutorialSteps[activeStep].label}
       />
 
-       {/* added grid to text below the images */}
+      {/* added grid information about restaurant */}
 
-        {/* added text below images  */}
-        
-        <Grid container spacing={1}direction="row"
-          alignContent="center"
-          alignItems="center"
->
+      {/* information about restaurant called here  */}
+
+      <Grid container spacing={1} direction="row"
+        alignContent="center"
+        alignItems="center"
+      >
+        {/* information about name of restaurant */}
         <Grid item xs={4}>
-       <Paper square elevation={0} className={classes.header}>
-        <Typography>
-          {tutorialSteps[activeStep].name}
-          </Typography>
-      </Paper>
-      </Grid>
+          <Paper square elevation={0} className={classes.header}>
+            <Typography>
+              {tutorialSteps[activeStep].name}
+            </Typography>
+          </Paper>
+        </Grid>
 
-      
-      <Paper square elevation={0} className={classes.header}>
-      <Grid item xs={4}>
-        <Typography>
-          {tutorialSteps[activeStep].cuisine1}
-          </Typography>
-          </Grid>
-          <Grid item xs={4}>
-          <Typography>
-          {tutorialSteps[activeStep].cuisine2}
-          </Typography>
-          </Grid>
-          <Grid item xs={4}>
-          <Typography>
-          {tutorialSteps[activeStep].cuisine3}
-          </Typography>
-          </Grid>
-      </Paper>
-    
 
-      <Grid item xs={12}>
-      <Paper square elevation={0} className={classes.header}>
-        <Typography>
-          {tutorialSteps[activeStep].body}
-          </Typography>
-      </Paper>
-      </Grid>
+        {/* information about all 3 cuisines of the restaurant  */}
+        <Paper square elevation={0} className={classes.header}>
+          <Grid item xs={4}>
+            <Typography>
+              {tutorialSteps[activeStep].cuisine1}
+            </Typography>
+          </Grid>
+
+          <Grid item xs={4}>
+            <Typography>
+              {tutorialSteps[activeStep].cuisine2}
+            </Typography>
+          </Grid>
+
+          <Grid item xs={4}>
+            <Typography>
+              {tutorialSteps[activeStep].cuisine3}
+            </Typography>
+          </Grid>
+        </Paper>
+
+
+        {/* information about the address of the restaurant  */}
+        <Grid item xs={12}>
+          <Paper square elevation={0} className={classes.header}>
+            <Typography>
+              {tutorialSteps[activeStep].body}
+            </Typography>
+          </Paper>
+        </Grid>
       </Grid>
       <MobileStepper
         steps={maxSteps}
@@ -146,7 +151,7 @@ export default function TextMobileStepper3() {
         variant="dots"
         activeStep={activeStep}
         nextButton={
-          <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps -1}>
+          <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
             {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
           </Button>
         }

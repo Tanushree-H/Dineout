@@ -51,6 +51,7 @@ const useStyles = makeStyles((theme) => ({
   },
   inputRoot: {
     color: 'inherit',
+    width: '100%',
   },
   inputInput: {
     padding: theme.spacing(1, 1, 1, 0),
@@ -166,6 +167,7 @@ export default function PrimarySearchAppBar() {
               classes={{
                 root: classes.inputRoot,
                 input: classes.inputInput,
+                width: "auto",
               }}
               inputProps={{ 'aria-label': 'search' }}
             />
