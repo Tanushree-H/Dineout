@@ -6,15 +6,15 @@ import ContainedButtons from './BackButtonAllPhotos';
 // Used the component for displaying all the images on the page along with showing who has uploaded it
 import TitlebarImageList from './ImagesAllPhotos';
 // Used the component for adding text
-import { Paper } from '@material-ui/core';
+import { Paper, Typography } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
+    // flexGrow: 1,
   },
   paper: {
-    padding: theme.spacing(1),
-    textAlign: 'center',
+    // padding: theme.spacing(1),
+    textAlign: 'left',
     
   
   },
@@ -28,27 +28,27 @@ export default function CenteredGrid2() {
 
 
       {/* grid added */}
-      <Grid container spacing={0.1}
+      <Grid container spacing={2}
        direction= "row"
        alignItems="center"
-       justify="center"
+       justify="left"
        style={{ minHeight: '85vh' }}
        >
         
         
       
         {/* component for back button */}
-           <Grid item xs={2} md={2}>
+           <Grid item xs={3} md={3}>
            <ContainedButtons/>
            </Grid>
 
 
           {/* component for heading text */}
-           <Grid item xs={8} md={8}>
+           <Grid item xs={9} md={9}>
               {/* Paper added for adding text */}
-          <Paper square elevation={0} className={classes.paper}>
+          <Typography className={classes.paper}>
            All Photos
-           </Paper>
+           </Typography>
            </Grid>
            
           
