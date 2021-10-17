@@ -21,12 +21,12 @@ const tutorialSteps = [
     label: 'Hurrycane',
     imgPath:
       // image path changed according to required image
-      'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cmVzdGF1cmFudHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80', 
-    },
+      'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cmVzdGF1cmFudHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80',
+  },
   {
     // heading of 'hurrycane' added
     label: 'Hurrycane',
-    imgPath: 
+    imgPath:
       // image path changed according to required image
       'https://upload.wikimedia.org/wikipedia/commons/6/62/Barbieri_-_ViaSophia25668.jpg',
   },
@@ -66,7 +66,6 @@ const useStyles = makeStyles((theme) => ({
     height: 80,
     paddingLeft: theme.spacing(0),
     paddingRight: theme.spacing(0),
-    color: 'F2635C',
   },
 
 
@@ -76,9 +75,18 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 400,
     overflow: 'hidden',
     width: '100%',
-  
+  },
 
-    
+  paper: {
+    display: 'flex',
+    alignItems: 'center',
+    height: 80,
+    paddingLeft: theme.spacing(0),
+    paddingRight: theme.spacing(0),
+    // color modified 
+    color: '#F2635C',
+
+
   },
 }));
 
@@ -102,29 +110,29 @@ function SwipeableTextMobileStepper() {
 
   return (
     <div className={classes.root}>
-     <Paper square elevation={0} className={classes.header}>
-     <Grid container spacing={0} direction= "row"
-       alignItems="center"
-       justify="center"
-       style={{ minHeight: '100vh' }}
-       >
-     
-      
-      <Grid item xs={1} md= {1}>
-        {/* back button added */}
-         <ContainedButtons /> 
-         </Grid>
+      <Paper square elevation={0} className={classes.paper}>
+        <Grid container spacing={0} direction="row"
+          alignItems="center"
+          justify="center"
+          style={{ minHeight: '100vh' }}
+        >
 
-         <Grid item xs={6} md={6}>
-        <Typography>{tutorialSteps[activeStep].label }</Typography>
-        </Grid>
 
-        <Grid item xs={5} md={5}>
-        {/* all photos button added */}
-        <ContainedButtons1 />
+          <Grid item xs={1} md={1}>
+            {/* back button added */}
+            <ContainedButtons />
+          </Grid>
+
+          <Grid item xs={6} md={6}>
+            <Typography>{tutorialSteps[activeStep].label}</Typography>
+          </Grid>
+
+          <Grid item xs={5} md={5}>
+            {/* all photos button added */}
+            <ContainedButtons1 />
+          </Grid>
+
         </Grid>
-      
-      </Grid>
       </Paper>
 
       <AutoPlaySwipeableViews
@@ -140,17 +148,17 @@ function SwipeableTextMobileStepper() {
             {Math.abs(activeStep - index) <= 2 ? (
               <img className={classes.img} src={step.imgPath} alt={step.label} />
             ) : null}
-           
-           
-           
-   
+
+
+
+
           </div>
         ))}
       </AutoPlaySwipeableViews>
 
-      
-         
-      
+
+
+
       <MobileStepper
         steps={maxSteps}
         position="static"
@@ -167,7 +175,7 @@ function SwipeableTextMobileStepper() {
           </Button>
         }
       />
-      
+
     </div>
   );
 }

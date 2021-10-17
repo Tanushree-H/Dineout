@@ -78,11 +78,6 @@ export default function SingleLineImageList() {
                                 root: classes.titleBar,
                                 title: classes.title,
                             }}
-                            actionIcon={
-                                <IconButton aria-label={`star ${item.title}`}>
-                                    <StarBorderIcon className={classes.title} />
-                                </IconButton>
-                            }
                         />
                     </ImageListItem>
                 ))}

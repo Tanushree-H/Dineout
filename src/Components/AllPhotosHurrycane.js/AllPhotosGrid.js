@@ -15,9 +15,10 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     // padding: theme.spacing(1),
     textAlign: 'left',
+    // customised color of text 
     color: '#F2635C',
-    
-  
+
+
   },
 }));
 
@@ -30,33 +31,33 @@ export default function CenteredGrid2() {
 
       {/* grid added */}
       <Grid container spacing={2}
-       direction= "row"
-       alignItems="center"
-       justify="left"
-       style={{ minHeight: '85vh' }}
-       >
-        
-        
-      
+        direction="row"
+        alignItems="center"
+        justify="left"
+        style={{ minHeight: '85vh' }}
+      >
+
+
+
         {/* component for back button */}
-           <Grid item xs={3} md={3}>
-           <ContainedButtons/>
-           </Grid>
+        <Grid item xs={3} md={3}>
+          <ContainedButtons />
+        </Grid>
 
 
-          {/* component for heading text */}
-           <Grid item xs={9} md={9}>
-              {/* Paper added for adding text */}
+        {/* component for heading text */}
+        <Grid item xs={9} md={9}>
+          {/* Paper added for adding text */}
           <Typography className={classes.paper}>
-           All Photos
-           </Typography>
-           </Grid>
-           
-          
- {/* component for the images' */}
+            All Photos
+          </Typography>
+        </Grid>
+
+
+        {/* component for the images' */}
         <Grid item xs={12} md={12}>
-          <TitlebarImageList/>
-        </Grid>    
+          <TitlebarImageList />
+        </Grid>
       </Grid>
     </div>
   );

@@ -15,7 +15,7 @@ import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
 const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
-    
+
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -24,17 +24,18 @@ const useStyles = makeStyles((theme) => ({
     display: 'none',
     [theme.breakpoints.up('sm')]: {
       display: 'block',
-      
-      
+
+
     },
   },
   search: {
     position: 'sticky',
     borderRadius: theme.shape.borderRadius,
-     backgroundColor: alpha(theme.palette.common.white, 0.15),
+    backgroundColor: 'white',
     '&:hover': {
-    backgroundColor: alpha(theme.palette.common.white, 0.25),
+      backgroundColor: 'white',
     },
+    borderRadius: 12,
     marginRight: theme.spacing(2),
     marginLeft: 0,
     width: '100%',
@@ -51,11 +52,13 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    // color customised 
+    color: '#F2635C'
   },
   inputRoot: {
-    color: 'inherit',
+    // color customised 
+    color: '#808080',
     width: '100%',
-    font: 'Lato',
   },
   inputInput: {
     padding: theme.spacing(1, 1, 1, 0),
@@ -71,7 +74,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'none',
     [theme.breakpoints.up('md')]: {
       display: 'flex',
-      
+
     },
   },
   sectionMobile: {
@@ -153,10 +156,10 @@ export default function PrimarySearchAppBar() {
     <div className={classes.grow}>
       <AppBar position="fixed"
 
-      // customised color of the search bar 
+        // customised color of the search bar 
 
-      AppBar style={{ background: '#F2635C' }}>
-        
+        AppBar style={{ background: '#F2635C' }}>
+
         <Toolbar>
           {/* button added for showing location */}
           <IconButton
@@ -206,7 +209,7 @@ export default function PrimarySearchAppBar() {
               onClick={handleMobileMenuOpen}
               color="inherit"
             >
-              <AccountCircle/>
+              <AccountCircle />
             </IconButton>
           </div>
         </Toolbar>

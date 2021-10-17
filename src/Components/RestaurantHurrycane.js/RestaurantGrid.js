@@ -15,6 +15,7 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     padding: theme.spacing(2),
     textAlign: 'center',
+    // color modified 
     color: '#000000',
   },
 }));
@@ -25,18 +26,18 @@ export default function CenteredGrid1() {
   return (
     <div className={classes.root}>
       <Grid container spacing={5}
-       direction= "column"
-       alignItems="center"
-       justify="center"
-       style={{ minHeight: '100vh' }}
-       >
+        direction="column"
+        alignItems="center"
+        justify="center"
+        style={{ minHeight: '100vh' }}
+      >
         <Grid item xs={12} md={12}>
-           {/* component for the initial images of the restaurant*/}
-          <SwipeableTextMobileStepper/>
+          {/* component for the initial images of the restaurant*/}
+          <SwipeableTextMobileStepper />
         </Grid>
         <Grid item xs={12} md={12}>
-           {/* component for the tabs of 'overview' , 'menu' and 'review'*/}
-          <SimpleTabs/>
+          {/* component for the tabs of 'overview' , 'menu' and 'review'*/}
+          <SimpleTabs />
         </Grid>
       </Grid>
     </div>

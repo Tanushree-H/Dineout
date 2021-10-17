@@ -21,7 +21,7 @@ const tutorialSteps = [
     imgPath:
       // image path changed according to required image
       'https://in.bmscdn.com/nmcms/events/banner/desktop/media-desktop-dineout-steppinout-food-festival-bangalore-0-2020-12-7-t-14-39-43.jpg',
-    },
+  },
   {
     // heading of 'best offers' added
     label: 'Best Offers',
@@ -41,6 +41,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     height: 50,
     paddingLeft: theme.spacing(1),
+
 
   },
   img: {
@@ -83,7 +84,7 @@ export default function TextMobileStepper1() {
         activeStep={activeStep}
         className={classes.root}
         nextButton={
-          <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps -1}>
+          <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
             {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
           </Button>
         }

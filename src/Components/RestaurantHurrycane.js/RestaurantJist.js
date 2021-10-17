@@ -10,6 +10,7 @@ const useStyles = makeStyles({
   root: {
     minWidth: 275,
     alignContent: 'center',
+    // color modified 
     background: '#F6F2EB'
   },
   bullet: {
@@ -34,31 +35,31 @@ export default function SimpleCard() {
       <CardContent>
         <Typography className={classes.title} color="textSecondary" gutterBottom>
           {/* Text updated to the required information */}
-          Andheri Lokhandwala, Mumbai - 400053 
-          
+          Andheri Lokhandwala, Mumbai - 400053
+
 
         </Typography>
 
         <Typography className={classes.title} color="textSecondary" gutterBottom>
           {/* Text updated to the required information */}
-         
+
           Rs. 300 for 2, Value for money
-         
+
 
         </Typography>
 
         <Typography className={classes.title} color="textSecondary" gutterBottom>
           {/* Text updated to the required information */}
-          
-           Juices, Fast Food 
-          
+
+          Juices, Fast Food
+
 
         </Typography>
 
         <Typography className={classes.title} color="textSecondary" gutterBottom>
           {/* Text updated to the required information */}
-          
-           Opens at 11.00 AM
+
+          Opens at 11.00 AM
 
         </Typography>
       </CardContent>

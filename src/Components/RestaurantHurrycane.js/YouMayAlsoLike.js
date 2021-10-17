@@ -24,7 +24,9 @@ const useStyles = makeStyles((theme) => ({
     transform: 'translateZ(0)',
   },
   title: {
+    // text modified 
     color: '#FFFFFF',
+    textAlign: 'left'
   },
   titleBar: {
     background:
@@ -43,7 +45,7 @@ const itemData = [
   },
 
 
-//Youmayalsolike2
+  //Youmayalsolike2
 
   {
     img: image2,
@@ -52,7 +54,7 @@ const itemData = [
   },
 
 
-//Youmayalsolike3
+  //Youmayalsolike3
 
   {
     img: image3,
@@ -81,11 +83,6 @@ export default function SingleLineImageList() {
                 root: classes.titleBar,
                 title: classes.title,
               }}
-              actionIcon={
-                <IconButton aria-label={`star ${item.title}`}>
-                  <StarBorderIcon className={classes.title} />
-                </IconButton>
-              }
             />
           </ImageListItem>
 

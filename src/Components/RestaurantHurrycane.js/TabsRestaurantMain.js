@@ -71,6 +71,10 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.text.secondary,
     width: 'auto',
   },
+  paper1: {
+    // color modified 
+    backgroundColor: '#5D1241',
+  }
 }));
 
 export default function SimpleTabs() {
@@ -84,7 +88,7 @@ export default function SimpleTabs() {
   return (
     <div className={classes.root}>
       <AppBar position="static">
-        <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" centered>
+        <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" centered className={classes.paper1}>
           {/* tab names added */}
           <Tab label="Overview" {...a11yProps(0)} />
           <Tab label="Menu" {...a11yProps(1)} />

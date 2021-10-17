@@ -15,10 +15,10 @@ import QueryBuilderOutlinedIcon from '@material-ui/icons/QueryBuilderOutlined';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    // maxWidth: 345,
     flexGrow: 1,
-    textAlign: 'centre',
-    background: '#F6F2EB'
+    textAlign: 'left',
+    // color modified as required 
+    background: '#F6F2EB',
   },
   media: {
     height: 0,
@@ -37,6 +37,9 @@ const useStyles = makeStyles((theme) => ({
   avatar: {
     backgroundColor: red[500],
   },
+
+
+
 }));
 
 export default function RecipeReviewCard1() {
@@ -50,65 +53,61 @@ export default function RecipeReviewCard1() {
   return (
     <Card className={classes.root}>
 
-      <CardMedia
-        className={classes.media}
-        // map image added
-        // image path changed to link of required image
-        image="https://media.wired.com/photos/59269cd37034dc5f91bec0f1/191:100/w_1280,c_limit/GoogleMapTA.jpg"
-        // image was titled as map
-        title="map"
-      />
+      {/* map added */}
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.699471597021!2d72.8460586507575!3d19.120835655466305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9cbc9db060f%3A0x94ef01ff54b72a2f!2sAndheri%20Metro%20Station!5e0!3m2!1sen!2sin!4v1634479329151!5m2!1sen!2sin"
+        width="350" height="200" allowfullscreen="" loading="lazy">
+      </iframe>
 
       {/* grid added to components */}
-      <Grid container spacing={2} direction= "row">
-        
-      
+      <Grid container spacing={2} direction="row">
 
-      <Grid item xs={3} md={3}>
-           {/* location icon added and styled */}
-        <LocationOnOutlinedIcon style={{backgroundColor: '#F2635C', color: '#FFFFFF'}}>
-        </LocationOnOutlinedIcon> 
+
+
+        <Grid item xs={3} md={3}>
+          {/* location icon added and styled */}
+          <LocationOnOutlinedIcon style={{ backgroundColor: '#F2635C', color: '#FFFFFF' }}>
+          </LocationOnOutlinedIcon>
         </Grid>
 
         <Grid item xs={9} md={9}>
-        <Typography variant="body2" color="textSecondary" component="p" className={classes.root}>
-          {/* Text updated as required */}
-          Society Stores, Lokhandwala,
-          Near Sanghavi Hospital Complex,
-          Andheri west, Mumbai 
-        </Typography>
+          <Typography variant="body2" color="textSecondary" component="p" className={classes.root}>
+            {/* Text updated as required */}
+            Society Stores, Lokhandwala,
+            Near Sanghavi Hospital Complex,
+            Andheri west, Mumbai
+          </Typography>
         </Grid>
-        
-        
+
+
         <Grid item xs={3} md={3}>
           {/* phone icon added and styled*/}
-          <PhoneOutlinedIcon style={{backgroundColor: '#F2635C', color: '#FFFFFF'}}>
-          </PhoneOutlinedIcon> 
-          </Grid>
+          <PhoneOutlinedIcon style={{ backgroundColor: '#F2635C', color: '#FFFFFF', }}>
+          </PhoneOutlinedIcon>
+        </Grid>
 
-          <Grid item xs={9} md={9}>
-          <Typography variant="body2" color="textSecondary" component="p"className={classes.root}>
-          {/* Text updated as required */}
-          +91 90040 81700
-        </Typography>
+        <Grid item xs={9} md={9}>
+          <Typography variant="body2" color="textSecondary" component="p" className={classes.root}>
+            {/* Text updated as required */}
+            +91 90040 81700
+          </Typography>
         </Grid>
 
         <Grid item xs={3} md={3}>
           {/* clock icon added and styled */}
-          <QueryBuilderOutlinedIcon style={{backgroundColor: '#F2635C', color: '#FFFFFF',}}>
-        </QueryBuilderOutlinedIcon>
-        
+          <QueryBuilderOutlinedIcon style={{ backgroundColor: '#F2635C', color: '#FFFFFF', }}>
+          </QueryBuilderOutlinedIcon>
+
         </Grid>
 
         <Grid item xs={9} md={9}>
-        <Typography variant="body2" color="textSecondary" component="p" className={classes.root}>
-        {/* Text updated as required */}
-          11am - 11pm
-        </Typography>
+          <Typography variant="body2" color="textSecondary" component="p" className={classes.root}>
+            {/* Text updated as required */}
+            11am - 11pm
+          </Typography>
         </Grid>
 
-       
-       </Grid>
+
+      </Grid>
 
     </Card>
   );

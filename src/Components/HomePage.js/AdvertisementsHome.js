@@ -22,13 +22,13 @@ const tutorialSteps = [
 
     imgPath:
       // image path changed according to required image
-      'https://mediabrief.com/wp-content/uploads/2021/05/Image-Dineout-to-donate-promoCash-COVID-19-relief-MediaBrief.jpg',
+      'https://www.exchange4media.com/news-photo/102624-DineoutGIRF.jpg',
   },
   {
 
     imgPath:
       // image path changed according to required image
-      'https://i.ytimg.com/vi/10dQARfBy7U/maxresdefault.jpg',
+      'https://www.dineout.co.in/blog/wp-content/uploads/2021/03/blog2.jpg',
   },
 
 ];
@@ -92,7 +92,7 @@ function SwipeableTextMobileStepper() {
         variant="dots"
         activeStep={activeStep}
         nextButton={
-          <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
+          <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1} >
             {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
           </Button>
         }

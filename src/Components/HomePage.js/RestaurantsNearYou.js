@@ -23,7 +23,7 @@ const tutorialSteps = [
     name: 'Hurrycane',
     cuisine1: 'Mexican',
     cuisine2: 'Chinese',
-    cuisine3: 'Continental',
+    cuisine3: 'Russian',
     body: '101, Lokhandwala, Andheri west'
 
   },
@@ -38,7 +38,7 @@ const tutorialSteps = [
     name: 'Pop Tates',
     cuisine1: 'American',
     cuisine2: 'Japanese',
-    cuisine3: 'Continental',
+    cuisine3: 'Korean',
     body: 'Opp Inox theatre, Nariman Theatre '
 
   },
@@ -53,7 +53,7 @@ const tutorialSteps = [
     name: 'Chillies',
     cuisine1: 'Mexican',
     cuisine2: 'Chinese',
-    cuisine3: 'Continental',
+    cuisine3: 'French',
     body: 'Sadashiv Road, Mahim '
   },
 
@@ -90,6 +90,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 18,
     color: '#FFFFFF',
     paddingLeft: theme.spacing(1),
+    // text highlighted as required 
     backgroundColor: '#5D1241',
   }
 }));
@@ -133,7 +134,7 @@ export default function TextMobileStepper2() {
         alignItems="center"
       >
         {/* information about name of restaurant */}
-        <Grid item xs={4}>
+        <Grid item xs={3} md={3}>
           <Paper square elevation={0} className={classes.header}>
             <Typography>
               {tutorialSteps[activeStep].name}
@@ -143,29 +144,28 @@ export default function TextMobileStepper2() {
 
 
         {/* information about all 3 cuisines of the restaurant  */}
-        <Paper square elevation={0} className={classes.cuisine}>
-          <Grid item xs={4}>
-            <Typography>
-              {tutorialSteps[activeStep].cuisine1}
-            </Typography>
-          </Grid>
+        <Grid item xs={3} md={3}>
+          <Typography className={classes.cuisine}>
+            {tutorialSteps[activeStep].cuisine1}
+          </Typography>
+        </Grid>
 
-          <Grid item xs={4}>
-            <Typography>
-              {tutorialSteps[activeStep].cuisine2}
-            </Typography>
-          </Grid>
+        <Grid item xs={3} md={3}>
+          <Typography className={classes.cuisine}>
+            {tutorialSteps[activeStep].cuisine2}
+          </Typography>
+        </Grid>
 
-          <Grid item xs={4}>
-            <Typography>
-              {tutorialSteps[activeStep].cuisine3}
-            </Typography>
-          </Grid>
-        </Paper>
+        <Grid item xs={3}>
+          <Typography className={classes.cuisine}>
+            {tutorialSteps[activeStep].cuisine3}
+          </Typography>
+        </Grid>
+
 
 
         {/* information about the address of the restaurant  */}
-        <Grid item xs={12}>
+        <Grid item xs={12} md={12}>
           <Paper square elevation={0} className={classes.header}>
             <Typography>
               {tutorialSteps[activeStep].body}

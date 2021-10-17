@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     alignContent: 'center',
     justify: 'center'
-    
+
   },
 }));
 
@@ -42,7 +42,7 @@ const itemData = [
     cols: 2,
   },
 
-//Menu2
+  //Menu2
   {
     img: image2,
 
@@ -51,7 +51,7 @@ const itemData = [
   },
 
 
-//Menu3
+  //Menu3
 
   {
     img: image3,
@@ -61,7 +61,7 @@ const itemData = [
   },
 
 
-//Menu4
+  //Menu4
 
   {
     img: image4,
@@ -72,7 +72,7 @@ const itemData = [
 
 
 
-//Menu5
+  //Menu5
 
   {
     img: image5,
@@ -83,7 +83,7 @@ const itemData = [
 
 
 
-//Menu6
+  //Menu6
 
   {
     img: image6,
@@ -94,7 +94,7 @@ const itemData = [
 
 
 
-//Menu7
+  //Menu7
   {
     img: image7,
 
@@ -104,7 +104,7 @@ const itemData = [
 
 
 
-//Menu8
+  //Menu8
 
   {
     img: image8,
@@ -115,7 +115,7 @@ const itemData = [
 
 
 
-//Menu9
+  //Menu9
 
   {
     img: image9,
@@ -131,18 +131,18 @@ export default function BasicImageList() {
 
   return (
     <div className={classes.root}>
-      <ImageList rowHeight={160} className={classes.imageList} cols={4} alignContent= 'center' alignItems= 'center'>
+      <ImageList rowHeight={160} className={classes.imageList} cols={4} alignContent='center' alignItems='center'>
 
         {/* all the images that were defined were called here. The image numbers were changed wherever required*/}
 
-        
+
         {itemData.map((item) => (
           <ImageListItem key={item.img} cols={item.cols || 1}>
             <img src={item.img} alt={item.title} />
           </ImageListItem>
         ))}
 
-        
+
       </ImageList>
     </div>
   );

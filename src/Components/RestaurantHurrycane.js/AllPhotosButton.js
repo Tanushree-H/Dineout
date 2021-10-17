@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 // added for linking the pages
-import {Link, Router} from "react-router-dom";
+import { Link, Router } from "react-router-dom";
 // component imported for 'allphotosbutton'
 import Button from '@material-ui/core/Button';
 
@@ -24,12 +24,12 @@ export default function ContainedButtons1() {
 
       <Link to={process.env.PUBLIC_URL + '/allphotos'}>
         {/* customised color of the button  */}
-      <Button variant="contained" style={{backgroundColor: '#F2635C', color: '#FFFFFF'}} href="">
-        ALL PHOTOS
-      </Button>
+        <Button variant="contained" style={{ backgroundColor: '#F2635C', color: '#FFFFFF' }} href="">
+          ALL PHOTOS
+        </Button>
       </Link>
 
-      
+
 
     </div>
   );
