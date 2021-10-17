@@ -58,15 +58,18 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 400,
     flexGrow: 1,
   },
+
+
   header: {
     display: 'flex',
     alignItems: 'center',
     height: 80,
     paddingLeft: theme.spacing(0),
     paddingRight: theme.spacing(0),
-    backgroundColor: theme.palette.background.default,
-
+    color: 'F2635C',
   },
+
+
   img: {
     height: 255,
     display: 'block',
@@ -113,7 +116,7 @@ function SwipeableTextMobileStepper() {
          </Grid>
 
          <Grid item xs={6} md={6}>
-        <Typography>{tutorialSteps[activeStep].label}</Typography>
+        <Typography>{tutorialSteps[activeStep].label }</Typography>
         </Grid>
 
         <Grid item xs={5} md={5}>

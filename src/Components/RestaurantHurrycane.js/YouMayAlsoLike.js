@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     transform: 'translateZ(0)',
   },
   title: {
-    color: theme.palette.primary.light,
+    color: '#FFFFFF',
   },
   titleBar: {
     background:
@@ -41,21 +41,21 @@ const itemData = [
     title: 'Avakay',
     author: 'author',
   },
-];
+
 
 //Youmayalsolike2
-const itemData2 = [
+
   {
-    img2: image2,
+    img: image2,
     title: 'Fisco',
     author: 'author',
   },
-];
+
 
 //Youmayalsolike3
-const itemData3 = [
+
   {
-    img3: image3,
+    img: image3,
     title: 'Chilly',
     author: 'author',
   },
@@ -71,8 +71,6 @@ export default function SingleLineImageList() {
       <ImageList className={classes.imageList} cols={2.0}>
 
         {/* all the images that were defined were called here. The image numbers were changed wherever required*/}
-
-        {/* Youmayalsolike1 */}
 
         {itemData.map((item) => (
           <ImageListItem key={item.img}>
@@ -93,45 +91,6 @@ export default function SingleLineImageList() {
 
         ))}
 
-        {/* Youmayalsolike2 */}
-
-        {itemData2.map((item) => (
-          <ImageListItem key={item.img2}>
-            <img src={item.img2} alt={item.title} />
-            <ImageListItemBar
-              title={item.title}
-              classes={{
-                root: classes.titleBar,
-                title: classes.title,
-              }}
-              actionIcon={
-                <IconButton aria-label={`star ${item.title}`}>
-                  <StarBorderIcon className={classes.title} />
-                </IconButton>
-              }
-            />
-          </ImageListItem>
-        ))}
-
-        {/* Youmayalsolike3 */}
-
-        {itemData3.map((item) => (
-          <ImageListItem key={item.img3}>
-            <img src={item.img3} alt={item.title} />
-            <ImageListItemBar
-              title={item.title}
-              classes={{
-                root: classes.titleBar,
-                title: classes.title,
-              }}
-              actionIcon={
-                <IconButton aria-label={`star ${item.title}`}>
-                  <StarBorderIcon className={classes.title} />
-                </IconButton>
-              }
-            />
-          </ImageListItem>
-        ))}
       </ImageList>
     </div>
   );

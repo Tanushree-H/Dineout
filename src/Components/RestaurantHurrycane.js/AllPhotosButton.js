@@ -23,7 +23,8 @@ export default function ContainedButtons1() {
       {/* connecting the restaurant page to the all photos page by adding a link to the all photos button */}
 
       <Link to={process.env.PUBLIC_URL + '/allphotos'}>
-      <Button variant="contained" color="primary" href="">
+        {/* customised color of the button  */}
+      <Button variant="contained" style={{backgroundColor: '#F2635C', color: '#FFFFFF'}} href="">
         ALL PHOTOS
       </Button>
       </Link>

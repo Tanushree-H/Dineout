@@ -69,6 +69,16 @@ const useStyles = makeStyles((theme) => ({
     display: 'block',
     width: '100%',
   },
+
+  cuisine: {
+    display: 'flex',
+    height: 50,
+    alignItems: 'center',
+    fontSize: 18,
+    color: '#FFFFFF',
+    paddingLeft: theme.spacing(1),
+    backgroundColor: '#5D1241',
+  }
 }));
 
 export default function TextMobileStepper3() {
@@ -115,7 +125,7 @@ export default function TextMobileStepper3() {
 
 
         {/* information about all 3 cuisines of the restaurant  */}
-        <Paper square elevation={0} className={classes.header}>
+        <Paper square elevation={0} className={classes.cuisine}>
           <Grid item xs={4}>
             <Typography>
               {tutorialSteps[activeStep].cuisine1}

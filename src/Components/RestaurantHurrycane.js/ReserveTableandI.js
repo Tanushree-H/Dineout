@@ -28,6 +28,8 @@ export default function FloatingActionButtons() {
     bottom: 80,
     left: 80,
     position: 'fixed',
+    backgroundColor: '#F2635C',
+    color: '#FFFFFF'
 };
 
 const style1 = {
@@ -37,12 +39,14 @@ const style1 = {
   bottom: 80,
   left: 280,
   position: 'fixed',
+  backgroundColor: '#F2635C',
+  color: '#FFFFFF'
 };
   return (
     <div className={classes.root}>
        
       {/* 'reserve a table' button added */}
-      <Fab variant="extended" color="primary" style={style}
+      <Fab variant="extended"  style={style}
  >
         Reserve a Table
       </Fab>

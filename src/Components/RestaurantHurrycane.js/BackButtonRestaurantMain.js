@@ -27,7 +27,8 @@ export default function UploadButtons() {
 {/* connecting the restaurant page to the home page by adding a link to the back button */}
 
 <Link to={process.env.PUBLIC_URL + '/home'}>
-      <Button variant="contained" color="primary" href="">
+  {/* customised color of the button  */}
+      <Button variant="contained" style={{backgroundColor: '#F2635C', color: '#FFFFFF'}} href="">
       <ArrowBackIos />
       </Button>
       </Link>

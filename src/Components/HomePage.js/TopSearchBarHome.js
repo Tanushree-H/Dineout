@@ -15,6 +15,7 @@ import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
 const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
+    
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -23,14 +24,16 @@ const useStyles = makeStyles((theme) => ({
     display: 'none',
     [theme.breakpoints.up('sm')]: {
       display: 'block',
+      
+      
     },
   },
   search: {
     position: 'sticky',
     borderRadius: theme.shape.borderRadius,
-    backgroundColor: alpha(theme.palette.common.white, 0.15),
+     backgroundColor: alpha(theme.palette.common.white, 0.15),
     '&:hover': {
-      backgroundColor: alpha(theme.palette.common.white, 0.25),
+    backgroundColor: alpha(theme.palette.common.white, 0.25),
     },
     marginRight: theme.spacing(2),
     marginLeft: 0,
@@ -52,6 +55,7 @@ const useStyles = makeStyles((theme) => ({
   inputRoot: {
     color: 'inherit',
     width: '100%',
+    font: 'Lato',
   },
   inputInput: {
     padding: theme.spacing(1, 1, 1, 0),
@@ -67,6 +71,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'none',
     [theme.breakpoints.up('md')]: {
       display: 'flex',
+      
     },
   },
   sectionMobile: {
@@ -146,7 +151,12 @@ export default function PrimarySearchAppBar() {
 
   return (
     <div className={classes.grow}>
-      <AppBar position="fixed">
+      <AppBar position="fixed"
+
+      // customised color of the search bar 
+
+      AppBar style={{ background: '#F2635C' }}>
+        
         <Toolbar>
           {/* button added for showing location */}
           <IconButton

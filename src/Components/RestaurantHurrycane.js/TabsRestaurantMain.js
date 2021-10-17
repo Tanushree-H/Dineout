@@ -102,8 +102,6 @@ export default function SimpleTabs() {
 
         <Grid container spacing={5}
           direction="column"
-          alignItems="center"
-          justify="center"
           style={{ minHeight: '100vh' }}>
 
 

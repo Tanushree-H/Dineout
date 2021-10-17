@@ -27,7 +27,7 @@ export default function ContainedButtons() {
      {/* connecting the all photos page to the restaurant page by adding a link to the back button */} 
 
       <Link to={process.env.PUBLIC_URL + '/restaurantmain'}>
-      <Button variant="contained" color="primary" href="">
+      <Button style={{ color: '#F2635C'}} href="">
       <ArrowBackIos />
       </Button>
       </Link>

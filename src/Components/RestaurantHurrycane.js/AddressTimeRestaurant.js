@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
     // maxWidth: 345,
     flexGrow: 1,
     textAlign: 'centre',
+    background: '#F6F2EB'
   },
   media: {
     height: 0,
@@ -64,23 +65,25 @@ export default function RecipeReviewCard1() {
       
 
       <Grid item xs={3} md={3}>
-           {/* location icon added */}
-        <LocationOnOutlinedIcon />
+           {/* location icon added and styled */}
+        <LocationOnOutlinedIcon style={{backgroundColor: '#F2635C', color: '#FFFFFF'}}>
+        </LocationOnOutlinedIcon> 
         </Grid>
 
         <Grid item xs={9} md={9}>
         <Typography variant="body2" color="textSecondary" component="p" className={classes.root}>
           {/* Text updated as required */}
-          Society Stores, Lokhandwala Complex,
-          Near Sanghavi Hospital, Andheri West,
-          Mumbai - 400053.
+          Society Stores, Lokhandwala,
+          Near Sanghavi Hospital Complex,
+          Andheri west, Mumbai 
         </Typography>
         </Grid>
         
         
         <Grid item xs={3} md={3}>
-          {/* phone icon added */}
-          <PhoneOutlinedIcon />
+          {/* phone icon added and styled*/}
+          <PhoneOutlinedIcon style={{backgroundColor: '#F2635C', color: '#FFFFFF'}}>
+          </PhoneOutlinedIcon> 
           </Grid>
 
           <Grid item xs={9} md={9}>
@@ -91,8 +94,10 @@ export default function RecipeReviewCard1() {
         </Grid>
 
         <Grid item xs={3} md={3}>
-          {/* clock icon added */}
-        <QueryBuilderOutlinedIcon />
+          {/* clock icon added and styled */}
+          <QueryBuilderOutlinedIcon style={{backgroundColor: '#F2635C', color: '#FFFFFF',}}>
+        </QueryBuilderOutlinedIcon>
+        
         </Grid>
 
         <Grid item xs={9} md={9}>

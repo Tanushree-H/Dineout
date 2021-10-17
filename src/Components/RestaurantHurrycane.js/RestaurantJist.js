@@ -9,7 +9,8 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles({
   root: {
     minWidth: 275,
-    alignContent: 'center'
+    alignContent: 'center',
+    background: '#F6F2EB'
   },
   bullet: {
     display: 'inline-block',
@@ -33,7 +34,7 @@ export default function SimpleCard() {
       <CardContent>
         <Typography className={classes.title} color="textSecondary" gutterBottom>
           {/* Text updated to the required information */}
-          Andheri Lokhandwala, Andheri West 
+          Andheri Lokhandwala, Mumbai - 400053 
           
 
         </Typography>
@@ -41,7 +42,7 @@ export default function SimpleCard() {
         <Typography className={classes.title} color="textSecondary" gutterBottom>
           {/* Text updated to the required information */}
          
-          Rs. 300 for 2 
+          Rs. 300 for 2, Value for money
          
 
         </Typography>
@@ -49,7 +50,7 @@ export default function SimpleCard() {
         <Typography className={classes.title} color="textSecondary" gutterBottom>
           {/* Text updated to the required information */}
           
-           Juice, Fast Food 
+           Juices, Fast Food 
           
 
         </Typography>
