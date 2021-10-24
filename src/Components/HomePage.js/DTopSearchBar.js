@@ -11,7 +11,6 @@ import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 // icon added for location
 import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
-import { Hidden } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -154,7 +153,6 @@ export default function PrimarySearchAppBar() {
   );
 
   return (
-    <Hidden xsUp>
     <div className={classes.grow}>
       <AppBar position="fixed"
 
@@ -219,6 +217,5 @@ export default function PrimarySearchAppBar() {
       {renderMobileMenu}
       {renderMenu}
     </div>
-    </Hidden>
   );
 }

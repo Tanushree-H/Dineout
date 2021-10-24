@@ -7,6 +7,7 @@ import SwipeableTextMobileStepper from './ImagesRestaurantMain';
 import SimpleTabs from './TabsRestaurantMain';
 // Used the component for adding buttons
 import FloatingActionButtons from './ReserveTableandI';
+import { Hidden } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -39,6 +40,10 @@ export default function CenteredGrid1() {
           {/* component for the tabs of 'overview' , 'menu' and 'review'*/}
           <SimpleTabs />
         </Grid>
+        <Hidden xsUp>
+          {/* 'the reserve a table' and 'i' button was called here*/}
+        <FloatingActionButtons/>
+        </Hidden>
       </Grid>
     </div>
   );

@@ -13,6 +13,7 @@ import DP from '../Assets/DP.png';
 import Payment from '../Assets/Payment.png';
 // image for community
 import Community from '../Assets/Community.png';
+import { Hidden } from '@material-ui/core';
 
 const useStyles = makeStyles({
 });
@@ -26,6 +27,7 @@ export default function SimpleBottomNavigation() {
   };
 
   return (
+    <Hidden xsUp>
     <BottomNavigation position="fixed"
       bottom="0"
 
@@ -57,5 +59,6 @@ export default function SimpleBottomNavigation() {
       </IconButton>} />
 
     </BottomNavigation>
+    </Hidden>
   );
 }
