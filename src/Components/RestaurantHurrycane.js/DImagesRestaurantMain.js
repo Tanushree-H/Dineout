@@ -86,6 +86,7 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: theme.spacing(0),
     // color modified 
     color: '#F2635C',
+    fontSize:'20px'
 
 
   },
@@ -117,7 +118,8 @@ function SwipeableTextMobileStepper() {
         direction="row"
           alignItems="center"
           justify="center"
-          style={{ minHeight: '100vh' }}
+          alignContent="left"
+          style={{ minHeight: '80vh' }}
         >
 
 
@@ -126,7 +128,7 @@ function SwipeableTextMobileStepper() {
             <ContainedButtons />
           </Grid>
 
-          <Grid item xs={11} md={11}>
+          <Grid item  md={11}>
             <Typography>{tutorialSteps[activeStep].label}</Typography>
           </Grid>
 

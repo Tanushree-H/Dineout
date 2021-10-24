@@ -18,9 +18,13 @@ const useStyles = makeStyles((theme) => ({
   },
   paper: {
     padding: theme.spacing(2),
-    textAlign: 'center',
+    textAlign: 'left',
     // color modified 
     color: '#000000',
+    fontSize: '25px',
+    
+    
+    
   },
 }));
 
@@ -60,7 +64,7 @@ export default function CenteredGrid2() {
         </Grid>
 
         <Grid item  md={12}>
-          <Typography>You May Also Like</Typography>
+        <Paper square elevation={0} className={classes.paper}>You may also like</Paper>
         </Grid>
 
         <Grid item  md={12}>

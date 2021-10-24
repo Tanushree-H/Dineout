@@ -28,7 +28,7 @@ export default function ContainedButtons() {
 
       <Link to={process.env.PUBLIC_URL + '/restaurantmain'}>
         {/* changed color of button and icon  */}
-        <Button variant="contained" style={{ backgroundColor: '#F2635C', color: '#FFFFFF' }} href="">
+        <Button  style={{ color: '#F2635C',  }} href="">
           <ArrowBackIos />
         </Button>
       </Link>
