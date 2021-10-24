@@ -12,6 +12,7 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 // icon added for location
 import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
 import { TextField } from '@material-ui/core';
+import BasicTextFields from './Dtextfield';
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -47,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   searchIcon: {
-    padding: theme.spacing(0, 2),
+    // padding: theme.spacing(0, 2),
     height: '100%',
     position: 'absolute',
     pointerEvents: 'none',
@@ -75,6 +76,7 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
   },
   inputInput: {
+    borderColor: '#F2635C',
     padding: theme.spacing(1, 1, 1, 0),
     // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
@@ -101,7 +103,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function PrimarySearchAppBar() {
+export default function PrimarySearchAppBar1() {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -186,21 +188,16 @@ export default function PrimarySearchAppBar() {
             {/* location icon added inside button */}
             <LocationOnOutlinedIcon />
           </IconButton>
+          <BasicTextFields/>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
+              
             </div>
             
-            <InputBase
-              // text altered for placeholder according to website designed
-              placeholder="Search in Mumbai…"
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput,
-                width: "auto",
-              }}
-              inputProps={{ 'aria-label': 'search' }}
-            />
+            
+            
+            
           </div>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>

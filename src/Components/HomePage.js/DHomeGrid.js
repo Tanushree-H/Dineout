@@ -13,6 +13,9 @@ import SingleLineImageList from './DTopPicks';
 import SuperSavers from './DSuperSavers';
 import SuperSavers2 from './DSuperSavers2';
 import SuperSavers3 from './DSuperSavers3';
+import SimpleCard from './footer';
+import PrimarySearchAppBar1 from './DTopSearchBar';
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -42,7 +45,7 @@ export default function CenteredGrid1() {
 
         {/* added for maintaining spacing  */}
         <Grid item xs={12} md={12}>
-          <PrimarySearchAppBar/>
+          <PrimarySearchAppBar1/>
         </Grid>
 
         <Grid item xs={12} md={12}>
@@ -103,6 +106,11 @@ export default function CenteredGrid1() {
         <Grid item xs={12} md={4}>
           <SuperSavers3/>
         </Grid>
+
+        <Grid item xs={12} md={12}>
+          <SimpleCard/>
+        </Grid>
+
 
 
 

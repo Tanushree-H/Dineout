@@ -27,7 +27,7 @@ export default function SimpleBottomNavigation() {
   };
 
   return (
-    <Hidden xsUp>
+    <Hidden mdUp>
     <BottomNavigation position="fixed"
       bottom="0"
 

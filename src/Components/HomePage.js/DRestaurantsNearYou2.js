@@ -12,6 +12,7 @@ import { red } from '@material-ui/core/colors';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import StarOutlineIcon from '@material-ui/icons/StarOutline';
 import Button from '@material-ui/core/Button';
+import { Link, Router } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -48,11 +49,12 @@ export default function RecipeReviewCard2() {
   return (
     <Card className={classes.root}>
       
+      <Link to={process.env.PUBLIC_URL + '/restaurantmain'}>
       <CardMedia
         className={classes.media}
         image="https://images.cnbctv18.com/wp-content/uploads/2020/07/jason-leung-poI7DelFiVA-unsplash-1-768x432.jpg"
-        
       />
+      </Link>
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
          Hurrycane

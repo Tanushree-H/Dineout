@@ -62,7 +62,7 @@ export default function RecipeReviewCard2() {
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
           {/* Text updated */}
-          Loved the ambience, loved the food.
+          Loved the ambience, loved the food. Location was a bit dull
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
