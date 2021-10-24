@@ -11,6 +11,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 // icon added for location
 import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
+import { TextField } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -30,10 +31,11 @@ const useStyles = makeStyles((theme) => ({
   },
   search: {
     position: 'sticky',
-    borderRadius: theme.shape.borderRadius,
-    backgroundColor: 'white',
+    borderRadius: '20',
+    borderColor: '#F2635C',
+    // backgroundColor: 'white',
     '&:hover': {
-      backgroundColor: 'white',
+      // backgroundColor: 'white',
     },
     borderRadius: 12,
     marginRight: theme.spacing(2),
@@ -55,9 +57,21 @@ const useStyles = makeStyles((theme) => ({
     // color customised 
     color: '#F2635C'
   },
+
+  textField: {
+    
+    // color customised 
+    borderColor: '#F2635C'
+  },
+
+  LocationIcon: {
+    
+    // color customised 
+    color: '#F2635C'
+  },
   inputRoot: {
     // color customised 
-    color: '#808080',
+    borderColor: '#F2635C',
     width: '100%',
   },
   inputInput: {
@@ -67,7 +81,9 @@ const useStyles = makeStyles((theme) => ({
     transition: theme.transitions.create('width'),
     width: '100%',
     [theme.breakpoints.up('md')]: {
-      width: '20ch',
+      width: '140ch',
+      
+      
     },
   },
   sectionDesktop: {
@@ -158,13 +174,13 @@ export default function PrimarySearchAppBar() {
 
         // customised color of the search bar 
 
-        AppBar style={{ background: '#F2635C' }}>
+        AppBar style={{ background: '#FFFFFF' }}>
 
         <Toolbar>
           {/* button added for showing location */}
           <IconButton
             edge="start"
-            className={classes.locationButton}
+            className={classes.LocationIcon}
             color="inherit"
           >
             {/* location icon added inside button */}
@@ -174,6 +190,7 @@ export default function PrimarySearchAppBar() {
             <div className={classes.searchIcon}>
               <SearchIcon />
             </div>
+            
             <InputBase
               // text altered for placeholder according to website designed
               placeholder="Search in Mumbai…"
@@ -201,7 +218,8 @@ export default function PrimarySearchAppBar() {
               <AccountCircle />
             </IconButton>
           </div>
-          <div className={classes.sectionMobile}>
+          <div className={classes.sectionMobile}/>
+         <div className={classes.LocationIcon}>
             <IconButton
               aria-label="show more"
               aria-controls={mobileMenuId}
@@ -212,6 +230,7 @@ export default function PrimarySearchAppBar() {
               <AccountCircle />
             </IconButton>
           </div>
+          
         </Toolbar>
       </AppBar>
       {renderMobileMenu}

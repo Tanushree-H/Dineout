@@ -7,17 +7,21 @@ import ImageListItemBar from '@material-ui/core/ImageListItemBar';
 import image1 from '../../Assets/TopPicks1.jpg'
 import image2 from '../../Assets/TopPicks2.jpg'
 import image3 from '../../Assets/TopPicks3.jpg'
+import image4 from '../../Assets/TopPicks4.jpg'
+import image5 from '../../Assets/TopPicks5.jpg'
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
         flexWrap: 'wrap',
-        justifyContent: 'space-around',
+        // justifyContent: 'space-around',
         overflow: 'hidden',
         backgroundColor: theme.palette.background.paper,
     },
     imageList: {
-        flexWrap: 'nowrap',
+         flexWrap: 'nowrap',
+         width: '1200px',
         // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
         transform: 'translateZ(0)',
     },
@@ -54,6 +58,22 @@ const itemData = [
 
         author: 'author',
     },
+
+    {
+        // Top Picks1
+        img: image4,
+
+        author: 'author',
+    },
+
+    {
+        // Top Picks1
+        img: image5,
+
+        author: 'author',
+    },
+
+    
 ];
 
 
@@ -63,7 +83,7 @@ export default function SingleLineImageList() {
 
     return (
         <div className={classes.root}>
-            <ImageList className={classes.imageList} cols={2.0}>
+            <ImageList className={classes.imageList} cols={5.0}>
 
                 {/* all the images that were defined were called here.*/}
 
