@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(1),
     textAlign: 'left',
     color: '000000',
+    fontSize: '25px'
   },
 }));
 
@@ -38,14 +39,14 @@ export default function CenteredGrid1() {
         direction="row"
         alignItems="left"
         justify="left"
-        
+
       >
 
         {/* Grid added to all the components on the home page  */}
 
         {/* added for maintaining spacing  */}
         <Grid item xs={12} md={12}>
-          <PrimarySearchAppBar1/>
+          <PrimarySearchAppBar1 />
         </Grid>
 
         <Grid item xs={12} md={12}>
@@ -54,67 +55,62 @@ export default function CenteredGrid1() {
         </Grid>
 
         <Grid item xs={12} md={12}>
-        <ScrollableTabsButtonAuto/>
+          <ScrollableTabsButtonAuto />
         </Grid>
 
         <Grid item xs={12} md={12}>
-          <TextMobileStepper1/>
+          <TextMobileStepper1 />
         </Grid>
 
         <Grid item xs={12} md={12}>
-          <Typography>
-          Restaurants Near You
-          </Typography>
-          </Grid>
+          <Paper square elevation={0} className={classes.paper}>Restaurants Near You</Paper>
 
-          <Grid item xs={12} md={4}>
-          <RecipeReviewCard/>
         </Grid>
 
         <Grid item xs={12} md={4}>
-          <RecipeReviewCard2/>
+          <RecipeReviewCard />
         </Grid>
 
         <Grid item xs={12} md={4}>
-          <RecipeReviewCard3/>
-        </Grid>
-
-        <Grid item xs={12} md={12}>
-        <Typography>
-          Top Picks
-          </Typography>
-        </Grid>
-
-        <Grid item xs={12} md={12}>
-          <SingleLineImageList/>
-        </Grid>
-
-        <Grid item xs={12} md={12}>
-        <Typography>
-          Super Savers
-          </Typography>
+          <RecipeReviewCard2 />
         </Grid>
 
         <Grid item xs={12} md={4}>
-          <SuperSavers/>
-        </Grid>
-
-        <Grid item xs={12} md={4}>
-          <SuperSavers2/>
-        </Grid>
-
-        <Grid item xs={12} md={4}>
-          <SuperSavers3/>
+          <RecipeReviewCard3 />
         </Grid>
 
         <Grid item xs={12} md={12}>
-          <SimpleCard/>
+          <Paper square elevation={0} className={classes.paper}>Top Picks</Paper>
+        </Grid>
+
+        <Grid item xs={12} md={12}>
+          <SingleLineImageList />
+        </Grid>
+
+        <Grid item xs={12} md={12}>
+          <Paper square elevation={0} className={classes.paper}>Super Savers</Paper>
+        </Grid>
+
+        <Grid item xs={12} md={4}>
+          <SuperSavers />
+        </Grid>
+
+        <Grid item xs={12} md={4}>
+          <SuperSavers2 />
+        </Grid>
+
+        <Grid item xs={12} md={4}>
+          <SuperSavers3 />
+        </Grid>
+
+        <Grid item xs={12} md={12}>
+          <SimpleCard />
         </Grid>
 
 
 
 
-        </Grid>
+      </Grid>
     </div>
   );
 }

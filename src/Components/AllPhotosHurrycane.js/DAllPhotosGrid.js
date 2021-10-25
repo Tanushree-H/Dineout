@@ -33,8 +33,8 @@ export default function CenteredGrid9() {
 
       {/* grid added */}
       <Grid container spacing={2}
-        
-        
+
+
       >
 
 
@@ -52,7 +52,7 @@ export default function CenteredGrid9() {
             All Photos
           </Typography>
         </Grid>
-        
+
         <Grid item xs={12} md={12}>
           <Paper square elevation={0} className={classes.paper}></Paper>
           <Paper square elevation={0} className={classes.paper}></Paper>

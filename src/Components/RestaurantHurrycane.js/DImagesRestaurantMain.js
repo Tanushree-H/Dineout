@@ -86,7 +86,7 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: theme.spacing(0),
     // color modified 
     color: '#F2635C',
-    fontSize:'20px'
+    fontSize: '20px'
 
 
   },
@@ -113,9 +113,9 @@ function SwipeableTextMobileStepper() {
   return (
     <div className={classes.root}>
       <Paper square elevation={0} className={classes.paper}>
-        
-        <Grid container spacing={0} 
-        direction="row"
+
+        <Grid container spacing={0}
+          direction="row"
           alignItems="center"
           justify="center"
           alignContent="left"
@@ -128,11 +128,11 @@ function SwipeableTextMobileStepper() {
             <ContainedButtons />
           </Grid>
 
-          <Grid item  md={11}>
+          <Grid item md={11}>
             <Typography>{tutorialSteps[activeStep].label}</Typography>
           </Grid>
 
-          
+
 
         </Grid>
       </Paper>
@@ -144,7 +144,7 @@ function SwipeableTextMobileStepper() {
         onChangeIndex={handleStepChange}
         enableMouseEvents
 
-        
+
 
       >
         {tutorialSteps.map((step, index) => (
@@ -159,12 +159,12 @@ function SwipeableTextMobileStepper() {
           </div>
         ))}
       </AutoPlaySwipeableViews>
-  
-      
+
+
 
       <Paper square elevation={0} className={classes.paper}>
-      <ContainedButtons1>{tutorialSteps[activeStep].label}</ContainedButtons1>
-      <ContainedButtons4>{tutorialSteps[activeStep].label}</ContainedButtons4>
+        <ContainedButtons1>{tutorialSteps[activeStep].label}</ContainedButtons1>
+        <ContainedButtons4>{tutorialSteps[activeStep].label}</ContainedButtons4>
       </Paper>
 
       <MobileStepper

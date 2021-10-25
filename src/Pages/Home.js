@@ -15,35 +15,35 @@ export default function Home() {
   return (
 
     <div className="App">
-    
-
-    <React.Fragment>
-      <Container maxwidth= "lg">
-
-    
-	
-  
-  
-       
-        {/* Grid for all components on the home page */}
-        <Hidden mdUp>
-        <header className="App-header">
-    {/* added the top search bar */}
-    <PrimarySearchAppBar/>
-  </header>
-       <CenteredGrid/>
-       </Hidden>
-
-       <Hidden mdDown>
-       <CenteredGrid1/>
-       </Hidden>
 
 
-  </Container>
-    </React.Fragment>
+      <React.Fragment>
+        <Container maxwidth="lg">
 
 
-    
+
+
+
+
+          {/* Grid for all components on the home page */}
+          <Hidden mdUp>
+            <header className="App-header">
+              {/* added the top search bar */}
+              <PrimarySearchAppBar />
+            </header>
+            <CenteredGrid />
+          </Hidden>
+
+          <Hidden mdDown>
+            <CenteredGrid1 />
+          </Hidden>
+
+
+        </Container>
+      </React.Fragment>
+
+
+
     </div>
   );
 }

@@ -53,14 +53,14 @@ export default function RecipeReviewCard6() {
   return (
     <Card className={classes.root}>
 
-     
+
 
       {/* grid added to components */}
       <Grid container spacing={4} direction="row">
 
 
 
-       
+
 
         <Grid item xs={12} md={12}>
           <Typography variant="body2" color="textSecondary" component="p" className={classes.root}>

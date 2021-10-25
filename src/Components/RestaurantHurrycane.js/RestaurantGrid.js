@@ -26,7 +26,7 @@ export default function CenteredGrid1() {
 
   return (
     <div className={classes.root}>
-      
+
       <Grid container spacing={5}
         direction="column"
         alignItems="center"
@@ -40,13 +40,13 @@ export default function CenteredGrid1() {
         <Grid item xs={12} md={12}>
           {/* component for the tabs of 'overview' , 'menu' and 'review'*/}
           <SimpleTabs />
-        </Grid> 
+        </Grid>
         {/* <Hidden xsUp> */}
-          {/* 'the reserve a table' and 'i' button was called here*/}
-        <FloatingActionButtons/>
+        {/* 'the reserve a table' and 'i' button was called here*/}
+        <FloatingActionButtons />
         {/* </Hidden> */}
       </Grid>
-      
+
     </div>
   );
 }

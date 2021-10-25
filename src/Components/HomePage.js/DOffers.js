@@ -9,18 +9,18 @@ import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 
 const tutorialSteps = [
   {
-    
+
     imgPath:
       // image path changed according to required image
       'https://www.sbicard.com/sbi-card-en/assets/media/images/personal/offers/categories/dining/buffet/d-buffet-festival.jpg',
   },
   {
-    
+
     imgPath:
       // image path changed according to required image
       'https://dealicious.me/wp-content/uploads/2021/03/amritsr-1024x390.jpg',
   },
-  
+
 ];
 
 const useStyles = makeStyles((theme) => ({

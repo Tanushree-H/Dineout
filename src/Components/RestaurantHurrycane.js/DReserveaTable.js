@@ -19,15 +19,15 @@ export default function ContainedButtons4() {
   return (
     <div className={classes.root}>
 
-      
-      
 
-      
-        {/* customised color of the button  */}
-        <Button variant="contained" style={{ backgroundColor: '#F2635C', color: '#FFFFFF' }} href="">
-          RESERVE A TABLE
-        </Button>
-      
+
+
+
+      {/* customised color of the button  */}
+      <Button variant="contained" style={{ backgroundColor: '#F2635C', color: '#FFFFFF' }} href="">
+        RESERVE A TABLE
+      </Button>
+
 
 
 

@@ -28,37 +28,37 @@ export default function SimpleBottomNavigation() {
 
   return (
     <Hidden mdUp>
-    <BottomNavigation position="fixed"
-      bottom="0"
+      <BottomNavigation position="fixed"
+        bottom="0"
 
-      value={value}
-      onChange={(event, newValue) => {
-        setValue(newValue);
+        value={value}
+        onChange={(event, newValue) => {
+          setValue(newValue);
 
-      }}
-    >
-      {/* all icons declared, named and size customised*/}
-      <BottomNavigationAction label="Home" icon={<IconButton >
-        <img src={Home1} height={35} width={40} />
-      </IconButton>} />
+        }}
+      >
+        {/* all icons declared, named and size customised*/}
+        <BottomNavigationAction label="Home" icon={<IconButton >
+          <img src={Home1} height={35} width={40} />
+        </IconButton>} />
 
-      <BottomNavigationAction label="Table" icon={<IconButton>
-        <img src={BookATable} height={40} width={50} />
-      </IconButton>} />
+        <BottomNavigationAction label="Table" icon={<IconButton>
+          <img src={BookATable} height={40} width={50} />
+        </IconButton>} />
 
-      <BottomNavigationAction label="DP" icon={<IconButton>
-        <img src={DP} height={40} width={40} />
-      </IconButton>} />
+        <BottomNavigationAction label="DP" icon={<IconButton>
+          <img src={DP} height={40} width={40} />
+        </IconButton>} />
 
-      <BottomNavigationAction label="Payment" icon={<IconButton>
-        <img src={Payment} height={45} width={70} />
-      </IconButton>} />
+        <BottomNavigationAction label="Payment" icon={<IconButton>
+          <img src={Payment} height={45} width={70} />
+        </IconButton>} />
 
-      <BottomNavigationAction label="Community" icon={<IconButton>
-        <img src={Community} height={40} width={50} />
-      </IconButton>} />
+        <BottomNavigationAction label="Community" icon={<IconButton>
+          <img src={Community} height={40} width={50} />
+        </IconButton>} />
 
-    </BottomNavigation>
+      </BottomNavigation>
     </Hidden>
   );
 }

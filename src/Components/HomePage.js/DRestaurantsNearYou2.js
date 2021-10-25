@@ -13,6 +13,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import StarOutlineIcon from '@material-ui/icons/StarOutline';
 import Button from '@material-ui/core/Button';
 import { Link, Router } from "react-router-dom";
+import { Grid } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -48,56 +49,88 @@ export default function RecipeReviewCard2() {
 
   return (
     <Card className={classes.root}>
-      
+
       <Link to={process.env.PUBLIC_URL + '/restaurantmain'}>
-      <CardMedia
-        className={classes.media}
-        image="https://images.cnbctv18.com/wp-content/uploads/2020/07/jason-leung-poI7DelFiVA-unsplash-1-768x432.jpg"
-      />
+        <CardMedia
+          className={classes.media}
+          image="https://images.cnbctv18.com/wp-content/uploads/2020/07/jason-leung-poI7DelFiVA-unsplash-1-768x432.jpg"
+        />
       </Link>
-      <CardContent>
-        <Typography variant="body2" color="textSecondary" component="p">
-         Hurrycane
-        </Typography>
-      </CardContent>
-      <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
-        <Button variant="contained" color="primary">
-OPEN
-</Button>
-        </IconButton>
-        <IconButton aria-label="share">
-        <Button variant="contained" color="primary">
-<StarOutlineIcon/>
-3
-</Button>
-        </IconButton>
-        <IconButton
-          className={clsx(classes.expand, {
-            [classes.expandOpen]: expanded,
-          })}
-          onClick={handleExpandClick}
-          aria-expanded={expanded}
-          aria-label="show more"
-        >
-          <ExpandMoreIcon />
-        </IconButton>
-      </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>
-         
-          <Typography paragraph>
-         505, shanti niketan complex, Juhu west
-         Indian and Continental
-          </Typography>
-          
-        </CardContent>
-      </Collapse>
+
+
+
+      <Grid container spacing={1}
+        direction="row"
+        alignContent="center"
+        alignItems="center">
+        <Grid item md={4}>
+          <CardContent>
+            <Typography variant="body2" color="textSecondary" component="p">
+              Hurrycane
+            </Typography>
+          </CardContent>
+        </Grid>
+
+
+        <CardActions disableSpacing>
+          <Grid item md={4}>
+            <IconButton aria-label="add to favorites">
+              <Button variant="outlined" style={{ borderColor: '#5D1241', color: '#5D1241', }}>
+                OPEN
+              </Button>
+            </IconButton>
+          </Grid>
+
+
+
+          <IconButton
+            className={clsx(classes.expand, {
+              [classes.expandOpen]: expanded,
+            })}
+            onClick={handleExpandClick}
+            aria-expanded={expanded}
+            aria-label="show more"
+          >
+            <ExpandMoreIcon />
+          </IconButton>
+        </CardActions>
+
+        <Collapse in={expanded} timeout="auto" unmountOnExit>
+
+
+
+          <Grid item md={12}>
+
+
+            <CardContent>o
+
+              <Typography paragraph>
+                707, Opp Juhu Beach, Juhu Novotel
+                Continental and Indian
+              </Typography>
+
+            </CardContent>
+          </Grid>
+
+          <Grid item md={12}>
+
+
+            <IconButton aria-label="share">
+              <Button variant="contained" style={{ backgroundColor: '#5D1241', color: '#FFFFFF', }}>
+                <StarOutlineIcon />
+                4.5
+              </Button>
+
+
+            </IconButton>
+          </Grid>
+        </Collapse>
+      </Grid>
     </Card>
 
   );
 
 
 
-  
+
 }

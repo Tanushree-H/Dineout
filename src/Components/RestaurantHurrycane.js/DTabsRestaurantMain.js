@@ -103,8 +103,8 @@ export default function SimpleTabs() {
 
         <Grid container spacing={5}
           direction="column"
-          
-          >
+
+        >
 
 
 
@@ -113,8 +113,8 @@ export default function SimpleTabs() {
             <RecipeReviewCard1 />
           </Grid>
 
-          
-          
+
+
         </Grid>
 
 
@@ -128,8 +128,8 @@ export default function SimpleTabs() {
         <Grid container spacing={5}>
 
 
-        <Grid item xs={12} md={12}>
-        <Paper square elevation={0} className={classes.paper}></Paper>
+          <Grid item xs={12} md={12}>
+            <Paper square elevation={0} className={classes.paper}></Paper>
           </Grid>
           {/* image list for menu photos */}
           <Grid item xs={12} md={12}>
@@ -145,33 +145,33 @@ export default function SimpleTabs() {
       <TabPanel value={value} index={2}>
 
         <Grid container spacing={5}
-        direction="column"
-        alignItems="center"
-        justify="center"
-        
+          direction="column"
+          alignItems="center"
+          justify="center"
+
         >
 
 
           {/* reviews */}
 
-          <Grid item  md={12}>
+          <Grid item md={12}>
             <RecipeReviewCard />
           </Grid>
 
-          <Grid item  md={12}>
+          <Grid item md={12}>
             <RecipeReviewCard2 />
           </Grid>
 
-       
+
         </Grid>
 
 
-        </TabPanel>
+      </TabPanel>
       <TabPanel value={value} index={3}>
-        <RecipeReviewCard6/>
+        <RecipeReviewCard6 />
 
 
-        
+
       </TabPanel>
 
     </div>

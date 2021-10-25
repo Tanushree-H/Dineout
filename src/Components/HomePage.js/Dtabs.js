@@ -17,7 +17,7 @@ function TabPanel(props) {
       aria-labelledby={`scrollable-auto-tab-${index}`}
       {...other}
     >
-    
+
     </div>
   );
 }
@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     // flexGrow: 1,
     width: '70%',
-    
+
   },
 }));
 
@@ -52,16 +52,16 @@ export default function ScrollableTabsButtonAuto() {
   };
 
   return (
-      
+
     <div className={classes.root}>
       <AppBar position="static" color="white">
-        
+
         <Tabs
           value={value}
           onChange={handleChange}
           indicatorColor="secondary"
-          
-         
+
+
           aria-label="scrollable auto tabs example"
         >
           <Tab label="Home" {...a11yProps(0)} />
@@ -69,7 +69,7 @@ export default function ScrollableTabsButtonAuto() {
           <Tab label="Dineout Pay" {...a11yProps(2)} />
           <Tab label="Dineout Passport" {...a11yProps(3)} />
           <Tab label="Blog" {...a11yProps(4)} />
-          
+
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
@@ -82,7 +82,7 @@ export default function ScrollableTabsButtonAuto() {
       </TabPanel>
       <TabPanel value={value} index={4}>
       </TabPanel>
-      
+
     </div>
   );
 }

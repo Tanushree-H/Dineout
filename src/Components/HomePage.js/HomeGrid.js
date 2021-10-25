@@ -29,7 +29,7 @@ export default function CenteredGrid() {
   const classes = useStyles();
 
   return (
-    
+
     <div className={classes.root}>
       <Grid container spacing={5}
         direction="column"
@@ -40,7 +40,7 @@ export default function CenteredGrid() {
 
         {/* Grid added to all the components on the home page  */}
         <Grid item xs={12} md={12}>
-        <PrimarySearchAppBar/>
+          <PrimarySearchAppBar />
         </Grid>
 
         {/* added for maintaining spacing  */}
@@ -80,6 +80,6 @@ export default function CenteredGrid() {
       </Grid>
 
     </div>
- 
+
   );
 }

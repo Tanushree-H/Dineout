@@ -22,9 +22,9 @@ const useStyles = makeStyles((theme) => ({
     // color modified 
     color: '#000000',
     fontSize: '25px',
-    
-    
-    
+
+
+
   },
 }));
 
@@ -33,15 +33,15 @@ export default function CenteredGrid2() {
 
   return (
     <div className={classes.root}>
-      
+
       <Grid container spacing={5}
-        // direction="column"
-        // alignItems="center"
-        // justify="center"
-        // style={{ minHeight: '100vh' }}
+      // direction="column"
+      // alignItems="center"
+      // justify="center"
+      // style={{ minHeight: '100vh' }}
       >
-        <Grid item  md={12}>
-         <PrimarySearchAppBar1/>
+        <Grid item md={12}>
+          <PrimarySearchAppBar1 />
         </Grid>
 
         <Grid item xs={12} md={12}>
@@ -50,35 +50,35 @@ export default function CenteredGrid2() {
         </Grid>
 
         <Grid item xs={12} md={12}>
-         <ScrollableTabsButtonAuto/>
+          <ScrollableTabsButtonAuto />
         </Grid>
 
 
-        <Grid item  md={6}>
+        <Grid item md={6}>
           {/* component for the initial images of the restaurant*/}
           <SwipeableTextMobileStepper />
         </Grid>
-        <Grid item  md={6}>
+        <Grid item md={6}>
           {/* component for the tabs of 'overview' , 'menu' and 'review'*/}
           <SimpleTabs />
         </Grid>
 
-        <Grid item  md={12}>
-        <Paper square elevation={0} className={classes.paper}>You may also like</Paper>
+        <Grid item md={12}>
+          <Paper square elevation={0} className={classes.paper}>You may also like</Paper>
         </Grid>
 
-        <Grid item  md={12}>
+        <Grid item md={12}>
           {/* component for the tabs of You may also like*/}
-          <SingleLineImageList/>
+          <SingleLineImageList />
         </Grid>
 
-        <Grid item  md={12}>
+        <Grid item md={12}>
           {/* component for the tabs of footer*/}
           <SimpleCard />
         </Grid>
-        
+
       </Grid>
-      
+
     </div>
   );
 }

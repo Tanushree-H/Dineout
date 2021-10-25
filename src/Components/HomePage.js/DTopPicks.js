@@ -20,8 +20,8 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: theme.palette.background.paper,
     },
     imageList: {
-         flexWrap: 'nowrap',
-         width: '1200px',
+        flexWrap: 'nowrap',
+        width: '1200px',
         // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
         transform: 'translateZ(0)',
     },
@@ -73,7 +73,7 @@ const itemData = [
         author: 'author',
     },
 
-    
+
 ];
 
 

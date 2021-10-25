@@ -11,15 +11,15 @@ export default function AllPhotos() {
       <Container fixed>
         <p>
           <Hidden mdUp>
-          {/* Grid for all components on the all photos page */}
-          <CenteredGrid2/>
+            {/* Grid for all components on the all photos page */}
+            <CenteredGrid2 />
           </Hidden>
         </p>
 
         <p>
           <Hidden mdDown>
-          {/* Grid for all components on the all photos page */}
-          <CenteredGrid9/>
+            {/* Grid for all components on the all photos page */}
+            <CenteredGrid9 />
           </Hidden>
         </p>
       </Container>

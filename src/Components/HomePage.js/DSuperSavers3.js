@@ -12,6 +12,7 @@ import { red } from '@material-ui/core/colors';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import StarOutlineIcon from '@material-ui/icons/StarOutline';
 import Button from '@material-ui/core/Button';
+import { Grid } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -47,56 +48,84 @@ export default function SuperSavers3() {
 
   return (
     <Card className={classes.root}>
-      
+
       <CardMedia
         className={classes.media}
         image="https://hips.hearstapps.com/toc.h-cdn.co/assets/17/01/1483652513-lebernardin-daniel-krieger.jpg"
         title="Paella dish"
       />
-      <CardContent>
-        <Typography variant="body2" color="textSecondary" component="p" >
-         Sizzle House
-        </Typography>
-      </CardContent>
-      <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
-        <Button variant="contained" color="primary">
-OPEN
-</Button>
-        </IconButton>
-        <IconButton aria-label="share">
-        <Button variant="contained" color="primary">
-<StarOutlineIcon/>
-5
-</Button>
-        </IconButton>
-        <IconButton
-          className={clsx(classes.expand, {
-            [classes.expandOpen]: expanded,
-          })}
-          onClick={handleExpandClick}
-          aria-expanded={expanded}
-          aria-label="show more"
-        >
-          <ExpandMoreIcon />
-        </IconButton>
-      </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>
-         
-          <Typography paragraph>
-          Cadle road, opp yes bank, Mumbai-16
-          continental and Indian
-          
-          </Typography>
-          
-        </CardContent>
-      </Collapse>
+      <Grid container spacing={1}
+        direction="row"
+        alignContent="center"
+        alignItems="center">
+        <Grid item md={5}>
+          <CardContent>
+            <Typography variant="body2" color="textSecondary" component="p">
+              China Bistro
+            </Typography>
+          </CardContent>
+        </Grid>
+
+
+        <CardActions disableSpacing>
+          <Grid item md={4}>
+            <IconButton aria-label="add to favorites">
+              <Button variant="outlined" style={{ borderColor: '#5D1241', color: '#5D1241', }}>
+                OPEN
+              </Button>
+            </IconButton>
+          </Grid>
+
+
+
+          <IconButton
+            className={clsx(classes.expand, {
+              [classes.expandOpen]: expanded,
+            })}
+            onClick={handleExpandClick}
+            aria-expanded={expanded}
+            aria-label="show more"
+          >
+            <ExpandMoreIcon />
+          </IconButton>
+        </CardActions>
+
+        <Collapse in={expanded} timeout="auto" unmountOnExit>
+
+
+
+          <Grid item md={12}>
+
+
+            <CardContent>o
+
+              <Typography paragraph>
+                Cadle Road, Opp Yes Bank, Mumbai -16
+                Mexican and Chinese
+              </Typography>
+
+            </CardContent>
+          </Grid>
+
+          <Grid item md={12}>
+
+
+            <IconButton aria-label="share">
+              <Button variant="contained" style={{ backgroundColor: '#5D1241', color: '#FFFFFF', }}>
+                <StarOutlineIcon />
+                4.5
+              </Button>
+
+
+            </IconButton>
+          </Grid>
+        </Collapse>
+      </Grid>
     </Card>
 
   );
 
 
 
-  
+
 }

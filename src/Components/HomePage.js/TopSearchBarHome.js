@@ -154,7 +154,7 @@ export default function PrimarySearchAppBar() {
   );
 
   return (
-    
+
     <div className={classes.grow}>
       <AppBar position="fixed"
 
@@ -219,6 +219,6 @@ export default function PrimarySearchAppBar() {
       {renderMobileMenu}
       {renderMenu}
     </div>
-    
+
   );
 }

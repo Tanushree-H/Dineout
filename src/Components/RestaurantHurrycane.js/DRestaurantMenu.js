@@ -38,54 +38,54 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
- 
-  const itemData = [
-    {
-      img: image1,
-      
-    },
 
-    {
-      img: image2,
-      
-    },
+const itemData = [
+  {
+    img: image1,
 
-    {
-      img: image3,
-      
-    },
+  },
 
-    {
-      img: image4,
-      
-    },
+  {
+    img: image2,
 
-    {
-      img: image5,
-      
-    },
+  },
 
-    {
-      img: image6,
-      
-    },
+  {
+    img: image3,
 
-    {
-      img: image7,
-      
-    },
+  },
 
-    {
-      img: image8,
-      
-    },
+  {
+    img: image4,
 
-    {
-      img: image9,
-      
-    },
-    
-  ];
+  },
+
+  {
+    img: image5,
+
+  },
+
+  {
+    img: image6,
+
+  },
+
+  {
+    img: image7,
+
+  },
+
+  {
+    img: image8,
+
+  },
+
+  {
+    img: image9,
+
+  },
+
+];
 
 
 export default function SingleLineImageList() {

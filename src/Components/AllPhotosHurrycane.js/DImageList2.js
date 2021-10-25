@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
 const itemData = [
   {
     img: image1,
-   
+
     author: 'author',
   },
 
@@ -49,7 +49,7 @@ const itemData = [
 
   {
     img: image2,
-    
+
     author: 'author',
   },
 
@@ -58,19 +58,19 @@ const itemData = [
 
   {
     img: image3,
-    
+
     author: 'author',
   },
 
   {
     img: image4,
-    
+
     author: 'author',
   },
 
   {
     img: image5,
-    
+
     author: 'author',
   },
 ];

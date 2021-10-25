@@ -60,13 +60,13 @@ const useStyles = makeStyles((theme) => ({
   },
 
   textField: {
-    
+
     // color customised 
     borderColor: '#F2635C'
   },
 
   LocationIcon: {
-    
+
     // color customised 
     color: '#F2635C'
   },
@@ -84,8 +84,8 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     [theme.breakpoints.up('md')]: {
       width: '140ch',
-      
-      
+
+
     },
   },
   sectionDesktop: {
@@ -188,35 +188,29 @@ export default function PrimarySearchAppBar1() {
             {/* location icon added inside button */}
             <LocationOnOutlinedIcon />
           </IconButton>
-          <BasicTextFields/>
+          <BasicTextFields />
+
+
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
-              
             </div>
-            
-            
-            
-            
           </div>
+
+
+
+
+
+
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
 
-            {/* button added for profile */}
-            <IconButton
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-              color="inherit"
-            >
-              {/* icon added inside button for profile */}
-              <AccountCircle />
-            </IconButton>
+            =
+            <AccountCircle />
+
           </div>
-          <div className={classes.sectionMobile}/>
-         <div className={classes.LocationIcon}>
+          <div className={classes.sectionMobile} />
+          <div className={classes.LocationIcon}>
             <IconButton
               aria-label="show more"
               aria-controls={mobileMenuId}
@@ -227,7 +221,7 @@ export default function PrimarySearchAppBar1() {
               <AccountCircle />
             </IconButton>
           </div>
-          
+
         </Toolbar>
       </AppBar>
       {renderMobileMenu}
